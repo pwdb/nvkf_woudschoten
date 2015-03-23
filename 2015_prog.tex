@@ -1,0 +1,360 @@
+\documentclass[a4paper,10pt]{report}
+%\documentclass[a4paper,draft]{report}
+
+% Template for the NVKF program
+
+%\usepackage[default,osfigures,scale=0.95]{opensans} 
+%\usepackage[default,osfigures,scale=0.9]{opensans} 
+%% Alternatively
+%% use the option 'defaultsans' instead of 'default' to replace the
+%% sans serif font only.
+%usepackage[T1]{fontenc}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setsansfont[Scale=MatchLowercase]{Myriad Pro}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\ttdefault}{\sfdefault}
+\usepackage{multicol}
+\usepackage[a4paper, landscape, margin=0.7cm]{geometry}
+\usepackage{graphicx}
+\usepackage{flushend}
+\usepackage{color}
+\usepackage{url}
+\usepackage{amsmath}
+\definecolor{Blue}{rgb}{0.3,0.3,0.9}
+\usepackage{polyglossia}
+\usepackage{draftwatermark}
+\SetWatermarkText{Concept}
+%\usepackage{flowfram}
+\setdefaultlanguage{dutch}
+
+\parskip=0pt
+%\baselineskip=0pt
+%\itemsep=2pt
+
+% space between columns
+\setlength{\columnsep}{1.4cm}
+% width of separation line between the columns
+\setlength{\columnseprule}{0.2pt}
+
+% for the session entries
+\newlength{\timewidth}
+\newlength{\entrywidth}
+
+\begin{document}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\begin{multicols*}{3}
+
+%% Put the logo left top
+\noindent
+\begin{tabular}{cc}
+    \parbox[b]{0.4\linewidth}{%
+\includegraphics[width=3cm]{nvkf_logo}
+}
+& 
+%\hspace{-0.5cm}\parbox[b]{0.6\linewidth}{%
+\parbox[b]{0.6\linewidth}{%
+\begin{center}
+{\bfseries Grenzeloze samenwerking}\\ \vspace{0.15cm} 
+{\bfseries XXVIVe NVKF-Conferentie}\\ \vspace{0.15cm}
+{27 en 28 maart 2015}\\ \vspace{0.15cm}
+{Woudschoten Conferentiecentrum}\\
+{Woudenbergseweg 54, Zeist}
+
+%\vspace{2cm}
+\end{center}
+}
+\end{tabular}
+
+%% End of the logo
+
+% To make the header for a plenair item
+\newcommand{\plenairheader}[2]{%
+\begin{center}
+{\color{Blue}{\textbf{#1}}}\\
+{\textbf{#2}}
+\end{center}
+}
+
+% To make the header for a parallel session 
+\newcommand{\parallelheader}[2]{%
+\parskip=0pt
+\noindent{{\color{Blue}{\textbf{\textit{{#1}}}}}\hfill{\textit{{#2}}}}\vspace{-0.2cm}
+%\noindent{{\color{Blue}{\textbf{\textit{{#1}}}}}\hfill{\textit{{#2}}}}\vspace{-0.1cm}
+}
+
+\newcommand{\parallelitem}[1]{%
+\noindent \hfill{\color{Blue}{\textbf{\textsc{{#1}}}}}\hfill\strut
+}
+
+\newenvironment{packed_enum}{%
+    \begin{enumerate}
+    \setlength{\itemsep}{1pt}
+    \setlength{\itemindent}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\leftmargin}{0pt}
+}{\end{enumerate}}
+
+%\newenvironment{sub_packed_enum}{%
+    %\begin{itemize}
+    %\setlength{\itemsep}{1pt}
+    %\setlength{\itemindent}{0cm}
+    %\setlength{\parskip}{0cm}
+    %\setlength{\parsep}{0cm}
+    \setlength{\leftmargin}{-1cm}
+%}{\end{itemize}}
+
+%\newenvironment{flushenum}{
+%\begin{enumerate}
+%}{\end{enumerate}}
+
+
+\plenairheader{Plenair Programma}{Vrijdag 27 maart 2015}
+
+\begin{packed_enum}
+    \item[09:30] Inschrijving en koffie
+        \vfill
+    \item[\textbf{10:00}] \textbf{Opening}\\\textit{Richard Kamman, voorzitter NVKF}
+        \vfill
+    \item[10:05] Grenzeloosheid: zouden we dat willen?\\\textit{Brigit van Ooijen, ziekenhuisapotheker\\Atrium-Orbis MC}
+        \vfill
+    \item[10:50] Koffiepauze
+        \vfill
+    \item[{\color{Blue}{\textbf{11:20}}}] {\color{Blue}{\textbf{Bijeenkomsten van de kringen (1)}}}
+        \vfill
+    %\item[12:45] Lunch 
+    %\item[12:45] Bijeenkomst klinisch fysici in opleiding
+    %\item[12:45] Bijeenkomst Nederlandse Vereniging voor Klinische Informatica in oprichting
+    \item[12:45] Lunch\\
+        {\small Bijeenkomst klinisch fysici in opleiding \hfill\textit{(Plenaire zaal)}}\\
+        {\small Bijeenkomst Nederlandse Vereniging voor Klinische Informatica
+        in oprichting \hfill\textit{(Zaal 25)}\strut}
+        \vfill
+    \item[{\color{Blue}{\textbf{14:00}}}] {\color{Blue}{\textbf{Bijeenkomsten van de kringen (2)}}}
+        \vfill
+    \item[15:30] Theepauze en postersessie 
+        \vfill
+    \item[\textbf{16:30}] {\textbf{Jonge Onderzoekersprijs (JOP)}}\\\textit{Voorzitter: Maurice Janssen}
+    \item[16:30] Point Spread Function modelling improves small lesion detectability in PET/CT\\\textit{Martine Lagerweij}
+    \item[16:50] Incorporation of MR Dixon red bone marrow imaging into treatment planning for gynecologic patients treated with chemoradiotherapy\\\textit{Petra Kroon}
+    \item[17:10] Geautomatiseerde kwaliteitscontrole van ultrageluidsapparatuur\\\textit{Pepijn van Horsen}
+    %\item[16:30] JOP 1\\\textit{supergeheim 1}
+    %\item[16:50] JOP 2\\\textit{supergeheim 2}
+    %\item[17:10] JOP 3\\\textit{supergeheim 3}
+        \vfill
+    \item[17:30] Presentatie nieuwe Klifio/KF/KFprof\\Opleidingsinitiatief van het jaar
+        \vfill
+    \item[\textbf{17:50}] {\textbf{Borreltijd}}
+        \vfill
+    \item[18:30] Diner
+        \vfill
+    \item[\textbf{20:30}] {\textbf{Van lab naar veld naar huis: overal meten
+        met Rolf Hut}}\\\textit{Rolf ``McGyver'' Hut}
+\end{packed_enum}
+
+\columnbreak
+
+\plenairheader{Plenair Programma}{Zaterdag 28 maart 2015}
+
+\begin{packed_enum}
+
+\item[{\color{Blue} {\textbf{09:00}}}]{\color{Blue}{\textbf{Bijeenkomsten van de kringen (3)}}}
+        \vfill
+\item[10:30] Koffiepauze
+        \vfill
+\item[\textbf{11:00}] {\textbf{Plenaire sessie}}\\\textit{Voorzitter: Maurice Janssen}
+\item[11:00] Radiologist meets physicist: Can we see what we hear?\\\textit{Berit Verbist, LUMC}
+\item[11:30] De chemie van samenwerken\\\textit{Otto Bekers, MUMC}
+\item[12:00] Physicist meets radiologist: \ldots\\\textit{Andrew Webb, LUMC}
+        \vfill
+\item[12:30] Sluiting
+\item[12:40] Lunch
+
+\end{packed_enum}
+
+%\strut\\\hrule \strut\\
+\hrule \vspace{3mm}
+\vfill
+\parallelitem{Parallelsessies (1) vrijdagochtend 27 maart}\\
+
+\parallelheader{Klinische Audiologie}{Zaal 24}
+\begin{packed_enum}
+\item[\textbf{11:20}] {\textbf{Overzicht wetenschappelijk audiologisch
+    onderzoek in de UMC's (1)}}\\\textit{Voorzitters: Bas Franck \& Erwin Baas}
+\item[11:20] Onderzoekslijnen in het UMC Utrecht\\\textit{Bert van Zanten}
+\item[11:50] Onderzoekslijnen in het LUMC\\\textit{Jeroen Briaire}
+\item[12:20] Onderzoekslijnen in het Erasmus MC\\\textit{Andre Goedegebure}
+\end{packed_enum}
+
+\vfill
+\parallelheader{Algemene Klinische Fysica}{Kapelzaal}
+\begin{packed_enum}
+\item[\textbf{11:20}]\textbf{Grenzeloze innovatie}\\\textit{Voorzitter: Homme-Auke Kooistra}
+\item[11:20] Duo-presentatie Storz/St\"opler en Olympus: 3D endo\-sco\-pie-ontwikkelingen
+\item[11:38] Stand van zaken Stille Alarmeringen\\\textit{Carola van Pul}
+\item[11:56] Orthopedische koeling\\\textit{Ad Donkerlo}
+\item[12:04] RFID door KPN
+\item[12:22] Thermal Imaging: (re)discovering the potentials for diag\-nostics and treatment evaluation in the clinical procedures\\\textit{Ruud Verdaasdonk}
+\end{packed_enum}
+\columnbreak
+
+\parallelheader{Beeldvormende Technieken}{Atrium (A7/A8)}
+\begin{packed_enum}
+\item[\textbf{11:20}]\textbf{Beeldreconstructiemethoden}\\\textit{Voorzitter: Jan Habraken}
+\item[11:20] Introductie, basisprincipe van beeldreconstructiemethoden\\\textit{Antoon Willemsen, UMCG}
+\item[11:50] CT beeldreconstructiemethoden\\\textit{Koos Geleijns, LUMC}
+\item[12:20] SPECT beeldreconstructiemethoden\\\textit{Hugo de Jong, UMCU}
+\item[12:20] PET beeldreconstructiemethoden\\\textit{Johan Nuyts, KUL, Leuven}
+\end{packed_enum}
+
+\parallelheader{Klinische Radiotherapie}{Plenaire zaal}
+\begin{packed_enum}
+\item[\textbf{11:20}]{\textbf{RT Sessie (1)}}\\\textit{Voorzitters: TBA}
+\item[11:20] Hypofractionation\\\textit{Jean Philippe Pignol}
+\item[11:50] MRI Linac\\\textit{Linda Kerkmeijer}
+\item[12:20] Proton Therapy\\\textit{Joachim Widder}
+\end{packed_enum}
+
+\parallelheader{Klinische Informatica}{Zaal 25}
+\begin{packed_enum}
+\item[\textbf{11:20}] \textbf{Handige software voor de klinisch fysicus}\\\textit{Voorzitter: Arjen Becht}
+\item[11:20] Digitaal Kernenergiewetdossier succesvol in gebruik\\\textit{Chris Peters, JBZ}
+\item[11:50] Update WAD software: kwaliteitsmetingen radiologische apparatuur\\\textit{Joost Kuijer, Vumc}
+\item[12:10] Nut en noodzaak voor een dosisregistratiesystemen (inleiding, \textit{Arjen Becht, Gelre Ziekenhuis}):\\
+    \vspace{-0.6cm} % bah, vies
+    \begin{packed_enum}
+    \item[1] Gebruikservaringen commercieel dosisregistratie software pakket \\\textit{Cécile Jeukens, MUMC}
+    \item[2] Gebruikservaringen WAD sw dosisregistratie software module \\\textit{Ralph Berendsen, Atrium}
+    \item[3] Technische implementatie aspecten en demo REM module in WAD sw  \\\textit{Anne Talsma, MZH}
+    \end{packed_enum}
+\end{packed_enum}
+
+%\strut\\\hrule \strut\\
+%\hrule\vspace{3mm}
+\columnbreak
+
+\parallelitem{Parallelsessies (2) vrijdagmiddag 27 maart}\\
+
+\parallelheader{Algemene Klinische Fysica}{Kapelzaal}
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{Grenzeloos snijden, coaguleren en ableren}\\\textit{Voorzitter: Job Gutteling}
+\end{packed_enum}
+\noindent Showcase cauterisatie en andere innovatieve snij-, coagulatie- en
+ablatietechnieken. De deelnemers hebben ieder 15 minuten spreektijd. 
+\begin{packed_enum}
+\item[1] HybridKnife voor gastro-enterologische/urologische procedures\\\textit{Paul Meijers, Erbe}
+\item[2] Thunderbeat: (advanced) bipolair als ultrasone techniek\\\textit{Manocher Gholghesaei, Olympus}
+\item[3] Plasmajet en AirSeal\\\textit{Don Entjes, Medical Dynamics}
+\item[4] Vessel Sealing (Marseal) en bi-polair pincet met irrigatie voor EHT\\\textit{Jos Walvius, KLS Martin}
+\item[5] Visie op de toekomst van de Energy Devices\\\textit{Jelle van Riezen, Covidien}
+\end{packed_enum}
+
+\vfill 
+
+\parallelheader{Beeldvormende Technieken}{Atrium (A7/A8)}
+\begin{packed_enum}
+\item[\textbf{14:00}]\textbf{RIVM dosisenquête en wetenschappelijke presentaties BVT}\\\textit{Voorzitter: Cecilia Hindorf}
+\item[14:00] Evaluatie RIVM dosisenquête: terug- en vooruitblik\\\textit{Arjen Becht, Gelre Ziekenhuis}
+\item[14:20] Toelichting op RIVM analyse CT dosisgegevens: wat kun je er mee?\\\textit{Arnold Schilham, UMCU}
+\item[14:30] Development and validation of a patient-tailored dose regime in coronary CT angiography \\\textit{Jorn van Dalen}
+\item[14:42] Imaging performance of Ingenuity TF PET/MR versus Gemini TF PET/CT\\\textit{Maqsood Yaqub}
+\item[14:54] De productie van 99mTc met een cyclotron\\\textit{Noortje de Groot}
+\item[15:06] Quantitative SPECT/CT: where are we, where are we going to?\\\textit{Eric Visser}
+\item[15:18] Radiation dose and image quality of novel mammography techniques\\\textit{Leonie Paulis}
+\end{packed_enum}
+ 
+\vfill
+
+\parallelheader{Klinische Audiologie}{Zaal 24}
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{Overzicht wetenschappelijk audiologisch onderzoek in de UMC's (2)}\\\textit{Voorzitters: Erwin Baas \& Bas Franck}
+\item[14:00] Onderzoekslijnen in het UMC Maastricht\\\textit{Erwin George} 
+\item[14:30] Inbedding UAC VUmc, speerpunten/research, samenwerking op campus en (inter)nationaal\\\textit{Theo Goverts}
+\item[15:00] Researchlijn op het gebied van spraakverstaan (van Plomp tot nu)\\\textit{Cas Smits}
+\end{packed_enum}
+
+\vfill
+
+\parallelheader{Klinische Radiotherapie}{Plenaire zaal}
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{RT Sessie (2)}\\\textit{Voorzitters: TBA}
+\item[14:00] Adaptive IGRT\\\textit{Jan Jacob Sonke}
+\item[14:30] Automatic Treatment Planning\\\textit{Sebastiaan Breedveld}
+\item[15:00] On-line Treatment Planning\\\textit{Bas Raaymakers}
+\end{packed_enum}
+
+\vfill
+\parallelheader{Klinische Informatica}{Zaal 25}
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{Werken onder architectuur}\\\textit{Voorzitter: Guido Zonneveld}
+\item[14:00] Uitleg over referentie domeinen model I-ziekenhuis? / hoe kan dit helpen bij het creëren van overzicht?\\\textit{Hans Boon, Elisabeth ziekenhuis}
+\item[14:30] Werken onder Enterprise Architectuur – ervaringen uit de praktijk en wat brengt het ons (niet) / eventueel ook andere sprekers \\\textit{Rob Malschaert, Canisius Wilhelmina Ziekenhuis} 
+\item[15:00] Regionale samenwerking op basis van Best Practices: garantie tot succes? \\\textit{Laurens de Groot, Radboud UMC} 
+\end{packed_enum}
+
+\vfill
+%\strut\\\hrule \strut\\
+\hrule\vspace{3mm}
+
+%\columnbreak
+\parallelitem{Parallelsessies (3) zaterdagochtend 28 maart}\\
+\vfill
+\parallelheader{Klinische Audiologie}{Kapelzaal}
+\begin{packed_enum}
+\item[\textbf{09:00}] \textbf{Vergadering KKau}\\\textit{Voorzitters: Donn\'e Pans en Alex Hoetink}
+\item[09:00] Lopende zaken
+\item[09:30] Hoofdbehandelaarschap en face-to-face contacten 
+\end{packed_enum}
+\columnbreak
+
+\parallelheader{Klinische Radiotherapie \& Beeldvormende Technieken}{Plenair}
+\begin{packed_enum}
+\item[\textbf{09:00}] \textbf{RT Sessie (3)}\\\textit{Voorzitters: TBA}
+\item[09:00] MRI for treatment planning\\\textit{Mariëlle Philippens}
+\item[09:30] MRI for tumour characterization\\\textit{Uulke van der Heide}
+\item[10:00] PET in motion\\\textit{Jeroen van de Kamer}
+\end{packed_enum}
+
+\vfill
+\parallelheader{Algemene Klinische Fysica}{Atrium (A7/A8)}
+\begin{packed_enum}
+\item[\textbf{09:00}] \textbf{AKF normen en waarden}\\\textit{Voorzitter: Michael Lansbergen}
+\end{packed_enum}
+%\item[] \textit{De sessie staat in het teken van huidige en met name toekomstige normen en waarden ten aanzien van de praktijkvoering van Algemene Klinische Fysica.}
+%\textit{De sessie staat in het teken van huidige en met name toekomstige normen en waarden ten aanzien van de praktijkvoering van Algemene Klinische Fysica.}
+\textit{Sessie in het teken van het cre\"eren van het beeld van het vakgebied Algemene Klinische Fysica en haar professionele randvoorwaarden.}
+\begin{packed_enum}
+\item[09:00] Grenzeloze samenwerking in de regioziekenhuizen: Van Slotervaart tot Stadskanaal: standaardisatiewerkzaamheden\\\textit{Lieke Poot}
+\item[09:18] Stand van zaken kenniscentrum en richtlijn ontwikkeling Federatie Medisch Specialisten\\\textit{Mariken Zijlmans}
+\item[09:36] Kwaliteitsnormen t\@.b\@.v\@. uitoefening klinische fysica\\\textit{Homme-Auke Kooistra} 
+\item[09:54] Presentatie Werkgroep WINT: Risicomanagement t\@.b\@.v\@. veilig toepassen medische hulpmiddelen\\\textit{Iris Blonk}
+\item[10:12] Kwaliteitsnormen t\@.b\@.v\@. scholing van fysische agentia\\\textit{Erik Gelderblom}
+\end{packed_enum}
+
+\vfill
+\parallelheader{Commissie Stralingshygiëne}{Zaal 24 en 25}
+\begin{packed_enum}
+\item[\textbf{09:00}] \textbf{Commissie Stralingshygiëne: vervolgsessie CBRN -- oefening opvang radioactief besmette slachtoffers op de SEH}
+\end{packed_enum}
+\noindent {\small Op 7 november 2014 vond het NVKF symposium "Stralingsincidenten en -ongevallen
+bij patiënten" plaats. Klinisch fysici hebben toen in de praktijk kunnen
+oefenen wat een stralingsdeskundige moet doen als zich radioactief besmette
+slachtoffers melden op de SEH. Ook is een cheat-sheet voor de
+stralingsdeskundige opgesteld. Op veler verzoek worden tijdens Woudschoten
+deze oefen\-sessies herhaald. Met ervaren CBRN trainers worden alle stappen van
+de cheat-sheet doorgenomen en in realistische setting getraind. De cheat-sheet
+kan ter voorbereiding hier worden gedownload via:
+\url{http://tinyurl.com/k47zcpw}. Let op: deelname is alleen mogelijk voor
+degenen die zich hebben ingeschreven via het betreffende onderdeel op het
+congres inschrijfformulier.  Opgeven voor wachtlijst via
+\url{straling@nvkf.nl}}.
+
+%\strut\vfill
+
+\end{multicols*}
+
+
+\end{document}
