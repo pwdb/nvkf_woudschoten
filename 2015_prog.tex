@@ -1,14 +1,7 @@
 \documentclass[a4paper,10pt]{report}
-%\documentclass[a4paper,draft]{report}
 
 % Template for the NVKF program
 
-%\usepackage[default,osfigures,scale=0.95]{opensans} 
-%\usepackage[default,osfigures,scale=0.9]{opensans} 
-%% Alternatively
-%% use the option 'defaultsans' instead of 'default' to replace the
-%% sans serif font only.
-%usepackage[T1]{fontenc}
 \usepackage{fontspec,xltxtra,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
 \setsansfont[Scale=MatchLowercase]{Myriad Pro}
@@ -25,21 +18,15 @@
 \usepackage{polyglossia}
 \usepackage{draftwatermark}
 \SetWatermarkText{Concept}
-%\usepackage{flowfram}
 \setdefaultlanguage{dutch}
 
 \parskip=0pt
-%\baselineskip=0pt
-%\itemsep=2pt
 
 % space between columns
+% needs to be twice the margin in order to fold in three
 \setlength{\columnsep}{1.4cm}
 % width of separation line between the columns
 \setlength{\columnseprule}{0.2pt}
-
-% for the session entries
-\newlength{\timewidth}
-\newlength{\entrywidth}
 
 \begin{document}
 \pagestyle{empty}
@@ -63,7 +50,6 @@
 {Woudschoten Conferentiecentrum}\\
 {Woudenbergseweg 54, Zeist}
 
-%\vspace{2cm}
 \end{center}
 }
 \end{tabular}
@@ -82,7 +68,6 @@
 \newcommand{\parallelheader}[2]{%
 \parskip=0pt
 \noindent{{\color{Blue}{\textbf{\textit{{#1}}}}}\hfill{\textit{{#2}}}}\vspace{-0.2cm}
-%\noindent{{\color{Blue}{\textbf{\textit{{#1}}}}}\hfill{\textit{{#2}}}}\vspace{-0.1cm}
 }
 
 \newcommand{\parallelitem}[1]{%
@@ -98,20 +83,6 @@
     \setlength{\leftmargin}{0pt}
 }{\end{enumerate}}
 
-%\newenvironment{sub_packed_enum}{%
-    %\begin{itemize}
-    %\setlength{\itemsep}{1pt}
-    %\setlength{\itemindent}{0cm}
-    %\setlength{\parskip}{0cm}
-    %\setlength{\parsep}{0cm}
-    \setlength{\leftmargin}{-1cm}
-%}{\end{itemize}}
-
-%\newenvironment{flushenum}{
-%\begin{enumerate}
-%}{\end{enumerate}}
-
-
 \plenairheader{Plenair Programma}{Vrijdag 27 maart 2015}
 
 \begin{packed_enum}
@@ -125,9 +96,6 @@
         \vfill
     \item[{\color{Blue}{\textbf{11:20}}}] {\color{Blue}{\textbf{Bijeenkomsten van de kringen (1)}}}
         \vfill
-    %\item[12:45] Lunch 
-    %\item[12:45] Bijeenkomst klinisch fysici in opleiding
-    %\item[12:45] Bijeenkomst Nederlandse Vereniging voor Klinische Informatica in oprichting
     \item[12:45] Lunch\\
         {\small Bijeenkomst klinisch fysici in opleiding \hfill\textit{(Plenaire zaal)}}\\
         {\small Bijeenkomst Nederlandse Vereniging voor Klinische Informatica
@@ -141,9 +109,6 @@
     \item[16:30] Point Spread Function modelling improves small lesion detectability in PET/CT\\\textit{Martine Lagerweij}
     \item[16:50] Incorporation of MR Dixon red bone marrow imaging into treatment planning for gynecologic patients treated with chemoradiotherapy\\\textit{Petra Kroon}
     \item[17:10] Geautomatiseerde kwaliteitscontrole van ultrageluidsapparatuur\\\textit{Pepijn van Horsen}
-    %\item[16:30] JOP 1\\\textit{supergeheim 1}
-    %\item[16:50] JOP 2\\\textit{supergeheim 2}
-    %\item[17:10] JOP 3\\\textit{supergeheim 3}
         \vfill
     \item[17:30] Presentatie nieuwe Klifio/KF/KFprof\\Opleidingsinitiatief van het jaar
         \vfill
@@ -175,7 +140,6 @@
 
 \end{packed_enum}
 
-%\strut\\\hrule \strut\\
 \hrule \vspace{3mm}
 \vfill
 \parallelitem{Parallelsessies (1) vrijdagochtend 27 maart}\\
@@ -232,8 +196,6 @@
     \end{packed_enum}
 \end{packed_enum}
 
-%\strut\\\hrule \strut\\
-%\hrule\vspace{3mm}
 \columnbreak
 
 \parallelitem{Parallelsessies (2) vrijdagmiddag 27 maart}\\
@@ -296,10 +258,8 @@ ablatietechnieken. De deelnemers hebben ieder 15 minuten spreektijd.
 \end{packed_enum}
 
 \vfill
-%\strut\\\hrule \strut\\
 \hrule\vspace{3mm}
 
-%\columnbreak
 \parallelitem{Parallelsessies (3) zaterdagochtend 28 maart}\\
 \vfill
 \parallelheader{Klinische Audiologie}{Kapelzaal}
@@ -323,8 +283,6 @@ ablatietechnieken. De deelnemers hebben ieder 15 minuten spreektijd.
 \begin{packed_enum}
 \item[\textbf{09:00}] \textbf{AKF normen en waarden}\\\textit{Voorzitter: Michael Lansbergen}
 \end{packed_enum}
-%\item[] \textit{De sessie staat in het teken van huidige en met name toekomstige normen en waarden ten aanzien van de praktijkvoering van Algemene Klinische Fysica.}
-%\textit{De sessie staat in het teken van huidige en met name toekomstige normen en waarden ten aanzien van de praktijkvoering van Algemene Klinische Fysica.}
 \textit{Sessie in het teken van het cre\"eren van het beeld van het vakgebied Algemene Klinische Fysica en haar professionele randvoorwaarden.}
 \begin{packed_enum}
 \item[09:00] Grenzeloze samenwerking in de regioziekenhuizen: Van Slotervaart tot Stadskanaal: standaardisatiewerkzaamheden\\\textit{Lieke Poot}
@@ -352,9 +310,6 @@ degenen die zich hebben ingeschreven via het betreffende onderdeel op het
 congres inschrijfformulier.  Opgeven voor wachtlijst via
 \url{straling@nvkf.nl}}.
 
-%\strut\vfill
-
 \end{multicols*}
-
 
 \end{document}
