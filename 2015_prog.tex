@@ -15,9 +15,10 @@
 \usepackage{url}
 \usepackage{amsmath}
 \definecolor{Blue}{rgb}{0.3,0.3,0.9}
+\definecolor{DarkBlue}{rgb}{0.0,0.0,1.0}
 \usepackage{polyglossia}
-\usepackage{draftwatermark}
-\SetWatermarkText{Concept}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{Concept}
 \setdefaultlanguage{dutch}
 
 \parskip=0pt
@@ -59,7 +60,7 @@
 % To make the header for a plenair item
 \newcommand{\plenairheader}[2]{%
 \begin{center}
-{\color{Blue}{\textbf{#1}}}\\
+{\color{DarkBlue}{\textbf{#1}}}\\
 {\textbf{#2}}
 \end{center}
 }
@@ -71,7 +72,7 @@
 }
 
 \newcommand{\parallelitem}[1]{%
-\noindent \hfill{\color{Blue}{\textbf{\textsc{{#1}}}}}\hfill\strut
+\noindent \hfill{\color{DarkBlue}{\textbf{\textsc{{#1}}}}}\hfill\strut
 }
 
 \newenvironment{packed_enum}{%
@@ -135,14 +136,15 @@
 \item[11:30] De chemie van samenwerken\\\textit{Otto Bekers, MUMC}
 \item[12:00] Physicist meets radiologist: \ldots\\\textit{Andrew Webb, LUMC}
         \vfill
-\item[12:30] Sluiting
+\item[\textbf{12:30}] \textbf{Sluiting}
 \item[12:40] Lunch
 
 \end{packed_enum}
 
 \hrule \vspace{3mm}
-\vfill
 \parallelitem{Parallelsessies (1) vrijdagochtend 27 maart}\\
+\hrule
+\vfill
 
 \parallelheader{Klinische Audiologie}{Zaal 24}
 \begin{packed_enum}
@@ -169,9 +171,9 @@
 \begin{packed_enum}
 \item[\textbf{11:20}]\textbf{Beeldreconstructiemethoden}\\\textit{Voorzitter: Jan Habraken}
 \item[11:20] Introductie, basisprincipe van beeldreconstructiemethoden\\\textit{Antoon Willemsen, UMCG}
-\item[11:50] CT beeldreconstructiemethoden\\\textit{Koos Geleijns, LUMC}
-\item[12:20] SPECT beeldreconstructiemethoden\\\textit{Hugo de Jong, UMCU}
-\item[12:20] PET beeldreconstructiemethoden\\\textit{Johan Nuyts, KUL, Leuven}
+\item[11:45] CT beeldreconstructiemethoden\\\textit{Koos Geleijns, LUMC}
+\item[12:05] SPECT beeldreconstructiemethoden\\\textit{Hugo de Jong, UMCU}
+\item[12:25] PET beeldreconstructiemethoden\\\textit{Johan Nuyts, KUL, Leuven}
 \end{packed_enum}
 
 \parallelheader{Klinische Radiotherapie}{Plenaire zaal}
@@ -198,7 +200,11 @@
 
 \columnbreak
 
-\parallelitem{Parallelsessies (2) vrijdagmiddag 27 maart}\\
+%\vspace{-2mm}
+%\hrule \vspace{0mm}
+\parallelitem{Parallelsessies (2) vrijdagmiddag 27 maart}
+\hrule\strut
+\vfill
 
 \parallelheader{Algemene Klinische Fysica}{Kapelzaal}
 \begin{packed_enum}
@@ -259,9 +265,10 @@ ablatietechnieken. De deelnemers hebben ieder 15 minuten spreektijd.
 
 \vfill
 \hrule\vspace{3mm}
-
 \parallelitem{Parallelsessies (3) zaterdagochtend 28 maart}\\
+\hrule
 \vfill
+
 \parallelheader{Klinische Audiologie}{Kapelzaal}
 \begin{packed_enum}
 \item[\textbf{09:00}] \textbf{Vergadering KKau}\\\textit{Voorzitters: Donn\'e Pans en Alex Hoetink}
