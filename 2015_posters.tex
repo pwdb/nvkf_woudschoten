@@ -1,0 +1,115 @@
+
+\documentclass[a4paper,10pt]{report}
+
+% Template for the NVKF program
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setsansfont[Scale=MatchLowercase]{Myriad Pro}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\ttdefault}{\sfdefault}
+\usepackage{multicol}
+\usepackage[a4paper, landscape, margin=0.7cm]{geometry}
+\usepackage{graphicx}
+\usepackage{flushend}
+\usepackage{color}
+\usepackage{url}
+\usepackage{amsmath}
+\definecolor{Blue}{rgb}{0.3,0.3,0.9}
+\definecolor{DarkBlue}{rgb}{0.0,0.0,1.0}
+\usepackage{polyglossia}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{Concept}
+\setdefaultlanguage{dutch}
+
+\parskip=0pt
+
+% space between columns
+% needs to be twice the margin in order to fold in three
+\setlength{\columnsep}{1.4cm}
+% width of separation line between the columns
+\setlength{\columnseprule}{0.2pt}
+
+\begin{document}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+%\begin{multicols*}{2}
+
+%% Put the logo left top
+\noindent
+\begin{tabular}{cc}
+    \parbox[b]{0.4\linewidth}{%
+\includegraphics[width=3cm]{nvkf_logo}
+}
+& 
+%\hspace{-0.5cm}\parbox[b]{0.6\linewidth}{%
+\parbox[b]{0.6\linewidth}{%
+\begin{center}
+{\bfseries Grenzeloze samenwerking}\\ \vspace{0.15cm} 
+{\bfseries XXVIVe NVKF-Conferentie}\\ \vspace{0.15cm}
+{27 en 28 maart 2015}\\ \vspace{0.15cm}
+{Woudschoten Conferentiecentrum}\\
+{Woudenbergseweg 54, Zeist}
+
+\end{center}
+}
+\end{tabular}
+
+%% End of the logo
+
+% To make the header for a plenair item
+\newcommand{\plenairheader}[2]{%
+\begin{center}
+{\color{DarkBlue}{\textbf{#1}}}\\
+{\textbf{#2}}
+\end{center}
+}
+
+% To make the header for a parallel session 
+\newcommand{\parallelheader}[2]{%
+\parskip=0pt
+\noindent{{\color{Blue}{\textbf{\textit{{#1}}}}}\hfill{\textit{{#2}}}}\vspace{-0.2cm}
+}
+
+\newcommand{\parallelitem}[1]{%
+\noindent \hfill{\color{DarkBlue}{\textbf{\textsc{{#1}}}}}\hfill\strut
+}
+
+\newenvironment{packed_enum}{%
+    \begin{enumerate}
+    \setlength{\itemsep}{1pt}
+    \setlength{\itemindent}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\leftmargin}{0pt}
+}{\end{enumerate}}
+
+\plenairheader{Posters}{Vrijdag 27 maart 2015}
+
+\begin{tabular}{llllp{18cm}}
+   1& Jorn van Dalen & Isala & NG & Optimizing FDG-PET tumour imaging on a state-of-the-art PET/CT system using both EANM/EARL guidelines and a quadratic body-weight dependent dose regimen\\
+  2&Rudolf Uitham &  UMCG &    NG & Comparing the Impact of SPECT and IQ SPECT Cardiac Images on Myocardial Perfusion\\
+  3&Marco Goffi&  TweeSteden Tilburg&   AKF& Evaluation of Six Channelized Hotelling Observers in Combination with a Contrast Sensitivity Function to Predict Human Observer Performance\\
+  4&Alina van de Giessen &  Jeroen Bosch &    AKF& Loop maar naar de Pomp!\\
+  5&Tim van der Groot &  UMCG &    NG &  Contamination of cyclotron produced radiopharmaceuticals with long lived isotopes\\
+  6&Renske Hoeben  &  St Antonius&  AKF& Derivation of epidermal nerve fiber density from the response to laser stimuli applied with a spatial filter: pilot study in volunteers\\
+  7&Roald Schnerr&    MUMC & RAD& Shielding gamma-rays from nuclear medicine rooms: Monte Carlo simulations of ceiling scatter in the diagnostic and therapeutic use of 99mTc, 131I and 18F\\
+  8&Chiel den Harder  &   LUMC& RAD& 3D-printed lung phantomfor clinical image quality assessment\\
+  9&Nicole Bakker &  Spaarne en VUmc&  AKF&  In vitro biomechanical characteristics of the degenerative scoliotic lumbar spine: A comparison between scoliotic and non-scoliotic lumbar spinal segments.\\
+  10&Jeroen Verbunt&  Tergooi&  AKF&  De invloed van 18-FDG op SPECT\\
+  11&Rob van Rooij  &  MUMC&     NG&  Kwantitatieve Dual Isotope SPECT voor dosimetrie bij holmium-166 radioembolisatie\\
+  12&Rudolf Uitham &   UMCG &    NG/RT &   Effect van ongewenste verschuiving naalden bij HDR-prostaat-brachytherapie op dosisverdeling in doel- en risico-organen.\\
+  13&Sèvrin Huijsse&   UMCG &    RAD&  The impact of Sn-filter on detection and quantification of coronary calcification using third generation dual-source CT at ultra-low dose: a phantom study\\
+  14&Nicole Bakker &  Spaarne&  AKF&  Leidraad voor risico inschatting Medische Technologie Spaarne Gasthuis\\
+  15&Roland Snijder & UMCU &    AKF& Systematic Assessment of Physical Factors Causing Dosing Errors in Multi-Infusion Setups: Theoretical Modelling and Experimental Results\\
+  16&Richard Canters &  Radboudumc &  RT&  Real-time detection of deviations in radiotherapy beam delivery using a head-mounted detector\\
+  17&Joep Stroom &  Fundação Champalimaud & RT &  Minimizing intra-fractional prostate motion during hypofractionated radiotherapy using beacon transponders\\
+  18&Bastiaan van Nierop&  UMCU&     NG & Lung radiation dose estimated from quantitative Ho-166 SPECT before OSEM convergence\\
+  19&Kirsten Henken &  St Antonius&  AKF & Target accuracy of prostate biopsies guided by MRI/TRUS fusion images
+\end{tabular}
+
+
+%\end{multicols*}
+
+\end{document}
