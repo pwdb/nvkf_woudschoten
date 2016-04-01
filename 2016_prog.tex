@@ -95,7 +95,7 @@
 
 \newcommand\itemauthor[1]{{%
 \unskip\nobreak\hfil\penalty50
-\hskip2em\hbox{}\nobreak\hfil{\small \textbf{\textit{#1}}}%
+\hskip2em\hbox{}\nobreak\hfil{\normalsize \textbf{\textit{#1}}}%
 \parfillskip=0pt \finalhyphendemerits=0 \par}}
 
 %%%{{{ enditem
@@ -167,7 +167,7 @@
 \item[12:40] Lunch
 \end{packed_enum}%}}}
 
-\hrule %\vspace{3mm}
+\hrule \vspace{3mm}
 \parallelitem{Parallelsessies (1) vrijdagochtend 8 april}\\
 \hrule
 \vspace{3mm}
@@ -196,7 +196,9 @@
 \item[12:40] Presentatie enquêteresultaten en paneldiscussie\itemauthor{Jurgen Mourik}
 \end{packed_enum} %}}}
 
-%\vfill
+\vfill
+\strut
+\columnbreak
 
 \parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{ 
 \begin{packed_enum}
@@ -227,12 +229,13 @@
 
 \parallelheader{Algemene Klinische Fysica \& Zintuigfysica}{Kapelzaal} %{{{
 \begin{packed_enum}
-\item[\textbf{14:00}] \textbf{Over zintuigfysica, kleurregistraties en de controles hiervan}\\\textit{Voorzitter: Homme-Auke Kooistra}
-\item[14:00] Introductie klinische relevantie kleurweergave (met o.a. MDL-arts en medisch fotograaf Gelre zkh)
-\item[14:18] Werking optisch systeem van de mens ten aanzien van kleur\itemauthor{Gerard de wit (Bartimeus)}
-\item[14:36] Ontwikkelingen op het gebied van richtlijnen en kalibratie kleurendisplays\itemauthor{Tom Kimpe (Barco)}
-\item[14:54] Praktische kleurinstellingen in de huidige praktijk\itemauthor{Willy Hummel (MCL)}
-\item[14:12] Ontwikkelingen kleurcontrastmetingen\itemauthor{Wendy Mahn (Gelre zkh)}
+\item[\textbf{14:00}] \textbf{Kleur bekennen!?}\\\textit{Voorzitter: Homme-Auke Kooistra}
+%\item[14:00] Introductie klinische relevantie kleurweergave (met o.a. MDL-arts en medisch fotograaf Gelre zkh)
+\item[14:00] Introductie
+\item[14:10] Kleurperceptie en kleurruimtes\itemauthor{Gerard de Wit}
+\item[14:30] Ontwikkelingen op het gebied van richtlijnen en kalibratie kleurendisplays\itemauthor{Tom Kimpe}
+\item[14:50] Kwaliteitscontrole monitoren in het MCL: hoe dit uit te breiden naar kleur?\itemauthor{Willy Hummel}
+\item[15:10] Geef kleur aan de QC van beeldschermen!\itemauthor{Wendy Mahn}
 \end{packed_enum} %}}}
 
 %\vfill 
@@ -271,13 +274,16 @@
 \item[15:00] Kunstmatige intelligentie in de zorg: van toekomstbeeld naar realiteit\itemauthor{Maarten de Schipper(Xomnia)}
 \end{packed_enum} %}}}
 
-%\vfill
+\vfill
+\strut
+\columnbreak
 \hrule\vspace{3mm}
 \parallelitem{Parallelsessies (3) zaterdagochtend 9 april}\\
-\hrule
+%\hrule
+\hrule\vspace{3mm}
 \vfill
 
-\parallelheader{Zintuigfysica}{Kapelzaal} %{{{
+\parallelheader{Zintuigfysica}{Zaal 24} %{{{
 \begin{packed_enum}
 \item[\textbf{09:00}] \textbf{Vergadering KKau}\\\textit{Voorzitters: TBA}
 %\item[09:00] Lopende zaken
@@ -286,12 +292,12 @@
 
 %\columnbreak
 
-\parallelheader{Beeldvormende Technieken}{Plenair} %{{{
+\parallelheader{Beeldvormende Technieken}{Kapelzaal} %{{{
 \begin{packed_enum}
-\item[\textbf{09:00}] \textbf{WAD 2.0}\\\textit{Voorzitters: KlaasJan Renema \& Cécile Jeukens}
-\item[09:00] Designing a Radiation Safety Plan for Médecins Sans Fron\-tiers: How to meet international standards in resource-limited conditions?\itemauthor{Leonie Paulis}
-\item[09:30] Updates WAD
-\item[10:00] Gebruikerservaringen
+\item[\textbf{09:00}] \textbf{Aanbevelingen kwaliteitscontroles radiodiagnostische apparatuur: WAD 2.0}\\\textit{Voorzitters: KlaasJan Renema \& Cécile Jeukens}
+\item[09:00] Designing a Radiation Safety Plan for Médecins Sans Fron\-tiers: How to meet international standards in resource-limited conditions?\itemauthor{Leonie Paulis \& Roald Schnerr}
+\item[09:30] Updates WAD-protocollen
+\item[10:00] Gebruikerservaringen WAD-software
 \end{packed_enum} %}}}
 
 %\vfill
@@ -318,6 +324,34 @@
 \item[10:15] \ldots\itemauthor{\ldots}
 %\item[10:15] Bekwaam = bevoegd en zo doen we dat bij medische apparatuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
 \end{packed_enum} %}}}
+
+\vfill
+\strut
+
+\columnbreak
+\hrule\vspace{3mm}
+\parallelitem{Posters}\\
+\hrule\vspace{3mm}
+
+%\parallelheader{Posters}{}%
+\begin{packed_enum}
+\item[\#1] Quantitative Tc-99m SPECT/CT: A comparison of Flash 3D, SUV SPECT and UMCS\itemauthor{Koen van Gils}
+\item[\#2] Imaging performance of a digital PET scanner: a comparison to analog systems\itemauthor{Jorn van Dalen}
+\item[\#3] Accuracy and precision of parametric analysis of dynamic [18F]FLT PET in EGFR-mutated NSCLC patients\itemauthor{Gem Kramer}
+\item[\#4] MLC QC: gap measurements of individual leaf pairs using the EPID\itemauthor{Frank de Weerd}
+\item[\#5] Radiation exposure to interventional radiologists during endovascular procedures\itemauthor{Leonie Paulis}
+\item[\#6] Feasibility of PET reconstruction using MR UTE-based attenuation maps\itemauthor{Han Keijzers}
+\item[\#7] Skeletal muscle oxygenation analysis with inclusion of an adipose tissue layer\itemauthor{Daniel den Boer}
+\item[\#8] Accuracy of UTE-MRI sequences for medical additive manufacturing: a cadaver head study\itemauthor{Maureen van Eijnatten}
+\item[\#9] Radiation safety assessment of 18F-labeled PET tracers for first-in-human studies: first experience with a simplified approach\itemauthor{Maqsood Yaqub}
+\item[\#10] Setup verification of fractionated stereotactic ablative radiotherapy for vertebral metastases: from pilot to realization\itemauthor{Ong Chin Loon}
+\item[\#11] In vivo dosimetry with MOSFETs and GAFCHROMIC films During IORT for Partial Breast Irradiation\itemauthor{Anna Pethoukova}
+\item[\#12] Accuracy and precision of partial volume correction in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
+\end{packed_enum}
+\vfill
+\strut
+
+
 
 \end{multicols*}
 
