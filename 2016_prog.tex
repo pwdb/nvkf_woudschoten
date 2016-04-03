@@ -16,21 +16,22 @@
 \usepackage[a4paper, landscape, margin=0.7cm]{geometry}
 \usepackage{graphicx}
 \usepackage{flushend}
+\usepackage{xcolor}
 \usepackage{color}
 \usepackage{url}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \definecolor{Blue}{rgb}{0.3,0.3,0.9}
 \definecolor{DarkBlue}{rgb}{0.0,0.0,1.0}
 \usepackage{polyglossia}
+%\usepackage{etoolbox}
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Concept}
+%\SetWatermarkScale{1.5}
+%\SetWatermarkColor[gray]{0.5}
 %\setdefaultlanguage{dutch}
 \setdefaultlanguage{english}
 
-\usepackage{draftwatermark}
-\SetWatermarkText{Concept}
-\SetWatermarkScale{1.5}
-%\SetWatermarkColor[gray]{0.5}
 
 \parskip=0pt
 
@@ -95,10 +96,16 @@
 %\newline\strut\hfill\mbox{\textit{#1}}%
 %}%}}}
 
+%\newcommand\itemauthor[1]{{%
+%\unskip\nobreak\hfil\penalty50
+%\hskip2em\hbox{}\nobreak\hfil{\small \textbf{\textit{#1}}}%
+%\parfillskip=0pt \finalhyphendemerits=0 \par}}
+
 \newcommand\itemauthor[1]{{%
-\unskip\nobreak\hfil\penalty50
-\hskip2em\hbox{}\nobreak\hfil{\small \textbf{\textit{#1}}}%
-\parfillskip=0pt \finalhyphendemerits=0 \par}}
+\unskip\nobreak\hfil\penalty50\hskip1.0em
+\hbox{}\nobreak\dotfill\hskip1.0em{\normalsize {\textit{#1}}}%
+%\nobreak\dotfill\hskip1.0em{\normalsize \textbf{\textit{#1}}}%
+\parfillskip=0pt \finalhyphendemerits=0 \par }}
 
 %%%{{{ enditem
 %\newcommand{\itemauthor}[1]{%
@@ -116,6 +123,16 @@
     \setlength{\leftmargin}{0pt}
 }{\end{enumerate}} %}}}
 
+%\makeatletter
+%\patchcmd{\@item}
+  %{\addvspace\itemsep}
+  %{\par\kern\dimexpr.7\itemsep-.7\parskip-.7\baselineskip\relax%
+   %\hrulefill%
+   %\par\kern\dimexpr.3\itemsep-.3\parskip-.3\baselineskip\relax}
+  %{}{}%
+%\makeatother
+
+
 \plenairheader{Plenair Programma}{Vrijdag 8 april 2016} %{{{
 
 \begin{packed_enum}
@@ -127,13 +144,13 @@
         \vfill
     \item[10:50] Koffiepauze
         \vfill
-    \item[{\color{Blue}{\textbf{11:20}} }] {\color{Blue}{\textbf{Bijeenkomsten van de kringen (1)}} }
+    \item[{\color{Blue}{\textbf{11:20}}}]{\color{Blue}{\textbf{Bijeenkomsten van de kringen (1)}} }
         \vfill
     \item[12:45] Lunch\\
         {\small Bijeenkomst klinisch fysici in opleiding \hfill\textit{(Plenaire zaal)}}\\
         %{\small Bijeenkomst Nederlandse Vereniging voor Klinische Informatica in oprichting \hfill\textit{(Zaal 25)}\strut}
         \vfill
-    \item[{\color{Blue}{\textbf{14:00} }}] {\color{Blue}{\textbf{Bijeenkomsten van de kringen (2)}} }
+    \item[{\color{Blue}{\textbf{14:00}}}]{\color{Blue}{\textbf{Bijeenkomsten van de kringen (2)}} }
         \vfill
     \item[15:30] Theepauze en postersessie 
         \vfill
@@ -148,7 +165,7 @@
         \vfill
     \item[18:30] Diner
         \vfill
-    \item[\textbf{20:30}] {\textbf{Avondspreker}}\\Koen van Mensvoort
+    \item[\textbf{20:30}] {\textbf{Avondspreker}}\\\textbf{\textit{Koen van Mensvoort}}
     \end{packed_enum}%}}}
 
 \columnbreak
@@ -156,7 +173,7 @@
 \plenairheader{Plenair Programma}{Zaterdag 9 april 2016} %%{{{
 
 \begin{packed_enum}
-\item[{\color{Blue} {\textbf{09:00} }}]{\color{Blue}{\textbf{Bijeenkomsten van de kringen (3)}} }
+\item[{\color{Blue}{\textbf{09:00}}}]{\color{Blue}{\textbf{Bijeenkomsten van de kringen (3)}} }
         \vfill
 \item[10:30] Koffiepauze
         \vfill
@@ -166,14 +183,19 @@
 \item[12:00] Maneuverable instrumentation: extending the reach of the surgeon\itemauthor{Paul Henselmans}
         \vfill
 \item[\textbf{12:30}] \textbf{Sluiting}
+\vfill
 \item[12:40] Lunch
 \end{packed_enum}%}}}
+
+\vfill
 
 \hrule \vspace{3mm}
 \parallelitem{Parallelsessies (1) vrijdagochtend 8 april}\\
 \hrule
 \vspace{3mm}
 \vfill
+
+%\noindent\fcolorbox{DarkBlue}{white}{\makebox[\columnwidth][c]{Parallelsessies (1) vrijdagochtend 8 april}}
 
 \parallelheader{Zintuigfysica}{Zaal 24} %{{{
 \begin{packed_enum}
@@ -188,7 +210,7 @@
 %\item[12:20] A fast, stochastic, and adaptive model of auditory nerve responses to cochlear implant stimulation\itemauthor{Margriet van Gendt}
 \end{packed_enum} %}}}
 
-%\vfill
+\vfill
 
 \parallelheader{Algemene Klinische Fysica \& Beeldvormende Technieken \& Com\-mis\-sie Stralings\-hygiëne}{Kapelzaal} %{{{
 \begin{packed_enum}
@@ -205,7 +227,7 @@
 \parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{ 
 \begin{packed_enum}
 %\item[\textbf{11:20}] \textbf{RT Sessie (1)}\\\textit{Voorzitter: TBA}
-\item[\textbf{11:20}] \textbf{RT Sessie (1)}\\
+\item[\textbf{11:20}] \textbf{RT Sessie (1)}
 \item[11:20] Geometrical uncertainties in the intracranial SRS treatment chain: a comprehensive overview\itemauthor{Tara vd Water}
 \item[11:50] Protonen: hoe staat het ermee? (4 sprekers uit 4 instituten, ieder 7 minuten)
 \item[12:20] Bestralingsapparaat met geïntegreerde MR: hoe staat het ermee? (3 sprekers uit 3 instituten, ieder 10 minuten)
@@ -222,6 +244,7 @@
 \item[12:10] Wat kunnen we met de informatie? Analyse achteraf\itemauthor{Carola van Pul}
 \end{packed_enum} %}}}
 
+\vfill
 %\columnbreak
 
 %\vspace{-2mm}
@@ -241,7 +264,7 @@
 \item[15:10] Geef kleur aan de QC van beeldschermen!\itemauthor{Wendy Mahn}
 \end{packed_enum} %}}}
 
-%\vfill 
+\vfill 
 
 \parallelheader{Beeldvormende Technieken}{Atrium (A7/A8)} %{{{
 \begin{packed_enum}
@@ -254,7 +277,7 @@
 \item[15:15] EARL accreditatie metingen op de GE Discovery 710 PET-CT\itemauthor{Sjoerd Rijnsdorp}
 \end{packed_enum} %}}}
  
-%\vfill
+\vfill
 
 
 \parallelheader{Klinische Radiotherapie \& Beeldvormende Technieken}{Plenaire zaal} %{{{ 
@@ -273,9 +296,9 @@
 \parallelheader{Klinische Informatica}{Zaal 25} %{{{
 \begin{packed_enum}
 \item[\textbf{14:00}] \textbf{Big data in de zorg}\\\textit{Voorzitter: Guido Zonneveld}
-\item[14:00] Big Data: alles kan, maar mag ook alles?\itemauthor{Patrick Lubbers (NKI)}
-\item[14:30] Big Data in de praktijk\itemauthor{Alisa Westerhof (M\&I)}
-\item[15:00] Kunstmatige intelligentie in de zorg: van toekomstbeeld naar realiteit\itemauthor{Maarten de Schipper(Xomnia)}
+\item[14:00] Big Data: alles kan, maar mag ook alles?\itemauthor{Patrick Lubbers}
+\item[14:30] Big Data in de praktijk\itemauthor{Alisa Westerhof}
+\item[15:00] Kunstmatige intelligentie in de zorg: van toekomstbeeld naar realiteit\itemauthor{Maarten de Schipper}
 \end{packed_enum} %}}}
 
 \vfill
@@ -304,12 +327,12 @@
 \item[10:00] Gebruikerservaringen WAD-software
 \end{packed_enum} %}}}
 
-%\vfill
+\vfill
 
 \parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{
 \begin{packed_enum}
 %\item[\textbf{09:00}]{\textbf{Technieken}}\\\textit{Voorzitter: TBA}
-\item[\textbf{09:00}]{\textbf{RT Sessie(2)}}\\
+\item[\textbf{09:00}]{\textbf{RT Sessie(2)}}
 \item[09:00] Inter-fraction OAR dose variation in pancreatic SBRT eval\-uated with daily contrast-enhanced in-room diagnostic CT\itemauthor{Chrysi Papalazarou}
 \item[09:18] Accuracy for dose calculations on CBCT scans of lung cancer patients using a vendor-specific approach\itemauthor{Mariska de Smet}
 \item[09:36] LRPM: An Algorithm for Fast and Fuzzy Automated Multi-Objective Treatment Planning\itemauthor{Rens van Haveren}
@@ -317,7 +340,7 @@
 \item[10:12] Robustness recipe for minimax robust optimization in in\-ten\-sity-modulated proton therapy for oropharyngeal can\-cer patients\itemauthor{Sebastian van der Voort}
 \end{packed_enum} %}}}
 
-%\vfill
+\vfill
 
 \parallelheader{Algemene Klinische Fysica}{Atrium (A7/A8)} % {{{
 \begin{packed_enum}
@@ -351,7 +374,7 @@
 \item[\#9] Radiation safety assessment of 18F-labeled PET tracers for first-in-human studies: first experience with a simplified approach\itemauthor{Maqsood Yaqub}
 \item[\#10] Setup verification of fractionated stereotactic ablative radiotherapy for vertebral metastases: from pilot to realization\itemauthor{Ong Chin Loon}
 \item[\#11] In vivo dosimetry with MOSFETs and GAFCHROMIC films during IORT for partial preast prradiation\itemauthor{Anna Pethoukova}
-\item[\#12] Bekwaam = bevoegd en zo doen we dat bij medische apparatuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
+\item[\#12] Bekwaam == bevoegd en zo doen we dat bij medische apparatuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
 %\item[\#12] Accuracy and precision of partial volume correction in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
 \end{packed_enum}
 \vfill
