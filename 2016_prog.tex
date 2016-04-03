@@ -11,6 +11,7 @@
 %\renewcommand{\ttdefault}{\sfdefault}
 %\renewcommand{\itdefault}{\sfdefault}
 %\renewcommand{\scdefault}{\sfdefault}
+\usepackage{microtype}
 \usepackage{multicol}
 \usepackage[a4paper, landscape, margin=0.7cm]{geometry}
 \usepackage{graphicx}
@@ -23,7 +24,8 @@
 \usepackage{polyglossia}
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Concept}
-\setdefaultlanguage{dutch}
+%\setdefaultlanguage{dutch}
+\setdefaultlanguage{english}
 
 \usepackage{draftwatermark}
 \SetWatermarkText{Concept}
@@ -95,7 +97,7 @@
 
 \newcommand\itemauthor[1]{{%
 \unskip\nobreak\hfil\penalty50
-\hskip2em\hbox{}\nobreak\hfil{\normalsize \textbf{\textit{#1}}}%
+\hskip2em\hbox{}\nobreak\hfil{\small \textbf{\textit{#1}}}%
 \parfillskip=0pt \finalhyphendemerits=0 \par}}
 
 %%%{{{ enditem
@@ -191,8 +193,8 @@
 \parallelheader{Algemene Klinische Fysica \& Beeldvormende Technieken \& Com\-mis\-sie Stralings\-hygiëne}{Kapelzaal} %{{{
 \begin{packed_enum}
 \item[\textbf{11:20}]\textbf{Tumorlokalisatie met I-125}\\\textit{Voorzitter: Marlies Overvelde}
-\item[11:20] TBA\itemauthor{Eugenie Linthorst en Manfred van der Vlies}
-\item[12:15] TBA\itemauthor{Iris van Gelder}
+\item[11:20] Ervaringen van een chirurg en een klinisch fysicus\itemauthor{Eugenie Linthorst en Manfred van der Vlies}
+\item[12:15] Ervaringen van de ANVS\itemauthor{Iris van Gelder}
 \item[12:40] Presentatie enquêteresultaten en paneldiscussie\itemauthor{Jurgen Mourik}
 \end{packed_enum} %}}}
 
@@ -202,7 +204,8 @@
 
 \parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{ 
 \begin{packed_enum}
-\item[\textbf{11:20}] \textbf{RT Sessie (1)}\\\textit{Voorzitter: TBA}
+%\item[\textbf{11:20}] \textbf{RT Sessie (1)}\\\textit{Voorzitter: TBA}
+\item[\textbf{11:20}] \textbf{RT Sessie (1)}\\
 \item[11:20] Geometrical uncertainties in the intracranial SRS treatment chain: a comprehensive overview\itemauthor{Tara vd Water}
 \item[11:50] Protonen: hoe staat het ermee? (4 sprekers uit 4 instituten, ieder 7 minuten)
 \item[12:20] Bestralingsapparaat met geïntegreerde MR: hoe staat het ermee? (3 sprekers uit 3 instituten, ieder 10 minuten)
@@ -213,18 +216,18 @@
 %\columnbreak
 \parallelheader{Klinische Informatica}{Zaal 25} %{{{
 \begin{packed_enum}
-\item[\textbf{11:20}] \textbf{Alarmeringen (Help! Ik heb een alarm!)}\\\textit{Voorzitter: Guido Zonneveld}
-\item[11:20] Theorie: wat zegt IHE hierover\itemauthor{Egon Scheepers (Amphia)}
-\item[11:50] In de paktijk: Verpleegkunding Oproep Systeem (VOS)\itemauthor{Jannis Syntychakis (Isala)}
-\item[12:10] Wat kunnen we met de informatie? Analyse achteraf\itemauthor{Carola van Pul (MMC)}
+\item[\textbf{11:20}] \textbf{Alarmeringen (Help! Ik heb een alarm!)}\\\textit{Voorzitter: Thierry Felkers}
+\item[11:20] Theorie: wat zegt IHE hierover\itemauthor{Egon Scheepers}
+\item[11:50] In de praktijk: Verpleegkunding Oproep Systeem (VOS)\itemauthor{Jannis Syntychakis}
+\item[12:10] Wat kunnen we met de informatie? Analyse achteraf\itemauthor{Carola van Pul}
 \end{packed_enum} %}}}
 
 %\columnbreak
 
 %\vspace{-2mm}
-\hrule \vspace{0mm}
+\hrule \vspace{3mm}
 \parallelitem{Parallelsessies (2) vrijdagmiddag 8 april}
-\hrule\strut
+\vspace{3mm}\hrule\strut
 \vfill
 
 \parallelheader{Algemene Klinische Fysica \& Zintuigfysica}{Kapelzaal} %{{{
@@ -242,7 +245,7 @@
 
 \parallelheader{Beeldvormende Technieken}{Atrium (A7/A8)} %{{{
 \begin{packed_enum}
-\item[\textbf{14:00}]\textbf{BVT Abstract sessie}\\\textit{Voorzitter: TBA}
+\item[\textbf{14:00}]\textbf{BVT Abstract sessie}\\\textit{Voorzitter: Ronald Boellaard}
 \item[14:00] Akoestische output metingen voor een Verasonics ultrageluidsysteem\itemauthor{Dennis Hulsen}
 \item[14:15] In-vivo validation of interpolation-based phase offset cor\-rection in MR flow quantification: a multivendor, multi-center study\itemauthor{Mark Hofman}
 \item[14:30] Dose eval\-uation for digital x-ray imaging of premature neonates\itemauthor{Teun Minkels}
@@ -256,7 +259,8 @@
 
 \parallelheader{Klinische Radiotherapie \& Beeldvormende Technieken}{Plenaire zaal} %{{{ 
 \begin{packed_enum}
-\item[\textbf{14:00}] \textbf{Gezamenlijke RT-BVT Sessie}\\\textit{Voorzitter: TBA}
+%\item[\textbf{14:00}] \textbf{Gezamenlijke RT-BVT Sessie}\\\textit{Voorzitter: TBA}
+\item[\textbf{14:00}] \textbf{Gezamenlijke RT-BVT Sessie}\\
 \item[14:00] The benefits of iterative reconstruction in dual energy CT\itemauthor{Roald Schnerr}
 \item[14:30] Tumor respons meten met PET: “Hoe zit het nu echt?”\itemauthor{Michiel Sinaasappel}
 \item[14:45] Accuracy and precision of partial volume cor\-rection in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
@@ -304,7 +308,8 @@
 
 \parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{
 \begin{packed_enum}
-\item[\textbf{09:00}]{\textbf{Technieken}}\\\textit{Voorzitter: TBA}
+%\item[\textbf{09:00}]{\textbf{Technieken}}\\\textit{Voorzitter: TBA}
+\item[\textbf{09:00}]{\textbf{RT Sessie(2)}}\\
 \item[09:00] Inter-fraction OAR dose variation in pancreatic SBRT eval\-uated with daily contrast-enhanced in-room diagnostic CT\itemauthor{Chrysi Papalazarou}
 \item[09:18] Accuracy for dose calculations on CBCT scans of lung cancer patients using a vendor-specific approach\itemauthor{Mariska de Smet}
 \item[09:36] LRPM: An Algorithm for Fast and Fuzzy Automated Multi-Objective Treatment Planning\itemauthor{Rens van Haveren}
@@ -321,8 +326,8 @@
 \item[09:30] First clinical experience with 3D endoscopic surgery in the St. Antonius hospital\itemauthor{Bastiaan van Nierop}
 \item[09:45] Kwaliteit in apparatuur thuiszorg\itemauthor{Gert Jan Engbers}
 \item[10:00] Introductie van innovatieve patiënt monitor op de Stroke Unit\itemauthor{Suzanne Oliveira-Martens}
-\item[10:15] \ldots\itemauthor{\ldots}
-%\item[10:15] Bekwaam = bevoegd en zo doen we dat bij medische apparatuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
+%\item[10:15] \ldots\itemauthor{\ldots}
+%\item[10:15] Bekwaam = bevoegd en zo doen we dat bij medische ap\-pa\-ra\-tuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
 \end{packed_enum} %}}}
 
 \vfill
@@ -335,8 +340,8 @@
 
 %\parallelheader{Posters}{}%
 \begin{packed_enum}
-\item[\#1] Quantitative Tc-99m SPECT/CT: A comparison of Flash 3D, SUV SPECT and UMCS\itemauthor{Koen van Gils}
-\item[\#2] Imaging performance of a digital PET scanner: a comparison to analog systems\itemauthor{Jorn van Dalen}
+\item[\#1] Quantitative Tc-99m SPECT/CT: A com\-par\-i\-son of Flash 3D, SUV SPECT and UMCS\itemauthor{Koen van Gils}
+\item[\#2] Imaging performance of a digital PET scanner: a com\-par\-i\-son to analog systems\itemauthor{Jorn van Dalen}
 \item[\#3] Accuracy and precision of parametric analysis of dynamic [18F]FLT PET in EGFR-mutated NSCLC patients\itemauthor{Gem Kramer}
 \item[\#4] MLC QC: gap measurements of individual leaf pairs using the EPID\itemauthor{Frank de Weerd}
 \item[\#5] Radiation exposure to interventional radiologists during endovascular procedures\itemauthor{Leonie Paulis}
@@ -345,8 +350,9 @@
 \item[\#8] Accuracy of UTE-MRI sequences for medical additive manufacturing: a cadaver head study\itemauthor{Maureen van Eijnatten}
 \item[\#9] Radiation safety assessment of 18F-labeled PET tracers for first-in-human studies: first experience with a simplified approach\itemauthor{Maqsood Yaqub}
 \item[\#10] Setup verification of fractionated stereotactic ablative radiotherapy for vertebral metastases: from pilot to realization\itemauthor{Ong Chin Loon}
-\item[\#11] In vivo dosimetry with MOSFETs and GAFCHROMIC films During IORT for Partial Breast Irradiation\itemauthor{Anna Pethoukova}
-\item[\#12] Accuracy and precision of partial volume correction in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
+\item[\#11] In vivo dosimetry with MOSFETs and GAFCHROMIC films during IORT for partial preast prradiation\itemauthor{Anna Pethoukova}
+\item[\#12] Bekwaam = bevoegd en zo doen we dat bij medische apparatuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
+%\item[\#12] Accuracy and precision of partial volume correction in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
 \end{packed_enum}
 \vfill
 \strut
