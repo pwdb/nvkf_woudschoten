@@ -69,7 +69,7 @@
 % To make the header for a parallel session 
 \newcommand{\parallelheader}[2]{%
 \parskip=0pt
-\noindent{{\color{Blue}{\textbf{\textit{{#1}}}}}\hfill{\textit{{#2}}}}\vspace{-0.2cm}
+\noindent{{\color{DarkBlue}{\textbf{\textit{{#1}}}}}\hfill{\textit{{#2}}}}\vspace{-0.2cm}
 } %}}}
 
 %{{{ parallelitem
@@ -121,7 +121,7 @@
   %{}{}%
 %\makeatother
 
-\strut\vfill
+%\strut\vfill
 \noindent
 \begin{center}
 \includegraphics[width=3cm]{nvkf_logo}\\
@@ -131,9 +131,9 @@
 {Woudschoten Conferentiecentrum}\\
 {Woudenbergseweg 54, Zeist}
 \end{center}
-\vfill\strut
+%\vfill\strut
+\vfill
 
-\columnbreak
 
 %\hrule\vspace{2mm}
 \plenairheader{Plenair Programma}{Vrijdag 8 april 2016} %{{{
@@ -148,13 +148,13 @@
         \vfill
     \item[10:50] Koffiepauze
         \vfill
-    \item[{\color{Blue}{\textbf{11:20}}}]{\color{Blue}{\textbf{Parallelsessies (1)}} }
+    \item[{\color{DarkBlue}{\textbf{11:20}}}]{\color{DarkBlue}{\textbf{Parallelsessies (1)}} }
         \vfill
     \item[12:45] Lunch\\
         {\small Bijeenkomst klinisch fysici in opleiding \hfill\textit{(Plenaire zaal)}}
         %{\small Bijeenkomst Nederlandse Vereniging voor Klinische Informatica in oprichting \hfill\textit{(Zaal 25)}\strut}
         \vfill
-    \item[{\color{Blue}{\textbf{14:00}}}]{\color{Blue}{\textbf{Parallelsessies (2)}} }
+    \item[{\color{DarkBlue}{\textbf{14:00}}}]{\color{DarkBlue}{\textbf{Parallelsessies (2)}} }
         \vfill
     \item[15:30] Theepauze en postersessie 
         \vfill
@@ -173,11 +173,13 @@
     \end{packed_enum}%}}}
 
 %\hrule\vspace{2mm}
+    %\vfill
+    \columnbreak
 \plenairheader{Plenair Programma}{Zaterdag 9 april 2016} %%{{{
 %\vspace{2mm}\hrule
 
 \begin{packed_enum}
-\item[{\color{Blue}{\textbf{09:00}}}]{\color{Blue}{\textbf{Parallelsessies (3)}} }
+\item[{\color{DarkBlue}{\textbf{09:00}}}]{\color{DarkBlue}{\textbf{Parallelsessies (3)}} }
         \vfill
 \item[10:30] Koffiepauze
         \vfill
@@ -192,7 +194,8 @@
 \end{packed_enum}%}}}
 
 
-\columnbreak
+%\columnbreak
+
 
 %{{{ Logo
 %% Put the logo left top
@@ -217,14 +220,13 @@
 %}}} End of the logo
 
 \vfill
-\columnbreak
+%\columnbreak
 
 \hrule\vspace{2mm}
-\parallelitem{Parallelsessies (1) vrijdagochtend 8 april}
+\parallelitem{Parallelsessies (1) vrijdagochtend 8 april \ldots}
 \vspace{2mm}\hrule\strut
 %\hrule
 %\vspace{2mm}
-\vfill
 
 \parallelheader{Zintuigfysica}{Zaal 24} %{{{
 \begin{packed_enum}
@@ -239,7 +241,7 @@
 %\item[12:20] A fast, stochastic, and adaptive model of auditory nerve responses to cochlear implant stimulation\itemauthor{Margriet van Gendt}
 \end{packed_enum} %}}}
 
-\vfill
+%\vfill
 
 \parallelheader{Algemene Klinische Fysica \& Beeldvormende Technieken \& Com\-mis\-sie Stralings\-hygiëne}{Kapelzaal} %{{{
 \begin{packed_enum}
@@ -249,18 +251,31 @@
 \item[12:40] Presentatie enquêteresultaten en paneldiscussie\itemauthor{Jurgen Mourik}
 \end{packed_enum} %}}}
 
-\vfill
+\columnbreak
+%\strut\vfill
+\hrule\vspace{2mm}
+\parallelitem{\ldots Parallelsessies (1) vrijdagochtend 8 april}
+\vspace{2mm}\hrule\strut
 
-\parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{ 
+%<knip>
+\parallelheader{Klinische Radiotherapie \& Beeldvormende Technieken}{Plenaire zaal} %{{{ 
 \begin{packed_enum}
-%\item[\textbf{11:20}] \textbf{RT Sessie (1)}\\\textit{Voorzitter: TBA}
-\item[\textbf{11:20}] \textbf{RT Sessie (1)}
-\item[11:20] Geometrical uncertainties in the intracranial SRS treatment chain: a comprehensive overview\itemauthor{Tara van de Water}
-\item[11:50] Protonen: hoe staat het ermee? (4 sprekers uit 4 instituten, ieder 7 minuten)
-\item[12:20] Bestralingsapparaat met geïntegreerde MR: hoe staat het ermee? (3 sprekers uit 3 instituten, ieder 10 minuten)
+%\item[\textbf{14:00}] \textbf{Gezamenlijke RT-BVT Sessie}\\\textit{Voorzitter: TBA}
+\item[\textbf{11:20}] \textbf{Gezamenlijke RT-BVT Sessie}
+\item[11:20] The benefits of iterative reconstruction in dual energy CT\itemauthor{Roald Schnerr}
+\item[11:45] Tumor respons meten met PET: “Hoe zit het nu echt?”\itemauthor{Michiel Sinaasappel}
+\item[12:00] Accuracy and precision of partial volume cor\-rection in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
+\item[12:15] Videobril voor verminderen claustrofobie in tun\-nel\-ap\-pa\-ra\-tuur\itemauthor{Vincent Althof}
+\item[12:30] Kwaliteitscontrole van beeldvormende apparatuur voor RT en BVT: gezamenlijk naar een hoger niveau\itemauthor{Folkert Koetsveld}
+%\item[14:00] The benefits of iterative reconstruction in dual energy CT\itemauthor{Roald Schnerr}
+%\item[14:30] Tumor respons meten met PET: “Hoe zit het nu echt?”\itemauthor{Michiel Sinaasappel}
+%\item[14:45] Accuracy and precision of partial volume cor\-rection in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
+%\item[15:00] Videobril voor verminderen claustrofobie in tun\-nel\-ap\-pa\-ra\-tuur\itemauthor{Vincent Althof}
+%\item[15:15] Kwaliteitscontrole van beeldvormende apparatuur voor RT en BVT: gezamenlijk naar een hoger niveau\itemauthor{Folkert Koetsveld}
 \end{packed_enum} %}}}
+%<knap>
 
-\vfill
+%\vfill
 
 \parallelheader{Klinische Informatica}{Zaal 25} %{{{
 \begin{packed_enum}
@@ -270,23 +285,23 @@
 \item[12:05] Zuster: “Help, \textit{alweer} een alarm!!” Risico’s, alarmmoeheid, analyse achteraf\itemauthor{Carola van Pul}
 \item[12:30] Paneldiscussie met alle sprekers
 \end{packed_enum} %}}}
+\vfill\strut
 
 \columnbreak
+
 
 \hrule \vspace{2mm}
 \parallelitem{Parallelsessies (2) vrijdagmiddag 8 april \ldots}
 \vspace{2mm}\hrule\strut
 
 %knip
-\parallelheader{Klinische Radiotherapie \& Beeldvormende Technieken}{Plenaire zaal} %{{{ 
+\parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{ 
 \begin{packed_enum}
-%\item[\textbf{14:00}] \textbf{Gezamenlijke RT-BVT Sessie}\\\textit{Voorzitter: TBA}
-\item[\textbf{14:00}] \textbf{Gezamenlijke RT-BVT Sessie}
-\item[14:00] The benefits of iterative reconstruction in dual energy CT\itemauthor{Roald Schnerr}
-\item[14:30] Tumor respons meten met PET: “Hoe zit het nu echt?”\itemauthor{Michiel Sinaasappel}
-\item[14:45] Accuracy and precision of partial volume cor\-rection in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
-\item[15:00] Videobril voor verminderen claustrofobie in tun\-nel\-ap\-pa\-ra\-tuur\itemauthor{Vincent Althof}
-\item[15:15] Kwaliteitscontrole van beeldvormende apparatuur voor RT en BVT: gezamenlijk naar een hoger niveau\itemauthor{Folkert Koetsveld}
+%\item[\textbf{11:20}] \textbf{RT Sessie (1)}\\\textit{Voorzitter: TBA}
+\item[\textbf{14:00}] \textbf{RT Sessie (1)}
+\item[14:00] Geometrical uncertainties in the intracranial SRS treatment chain: a comprehensive overview\itemauthor{Tara van de Water}
+\item[14:30] Protonen: hoe staat het ermee? (4 sprekers uit 4 instituten, ieder 7 minuten)
+\item[15:00] Bestralingsapparaat met geïntegreerde MR: hoe staat het ermee? (3 sprekers uit 3 instituten, ieder 10 minuten)
 \end{packed_enum} %}}}
 %knap
 
@@ -305,23 +320,6 @@
  
 \vfill
 
-\parallelheader{Klinische Informatica}{Zaal 25} %{{{
-\begin{packed_enum}
-\item[\textbf{14:00}] \textbf{Big data in de zorg}\\\textit{Voorzitter: Guido Zonneveld}
-\item[14:00] Big Data: alles kan, maar mag ook alles?\itemauthor{Patrick Lubbers}
-\item[14:30] Big Data in de praktijk\itemauthor{Alisa Westerhof}
-\item[15:00] Kunstmatige intelligentie in de zorg: van toekomstbeeld naar realiteit\itemauthor{Maarten de Schipper}
-\end{packed_enum} %}}}
-
-%\vfill
-%\strut
-\columnbreak
-
-\hrule \vspace{2mm}
-\parallelitem{\ldots Parallelsessies (2) vrijdagmiddag 8 april}
-\vspace{2mm}\hrule\strut
-%\vfill
-
 \parallelheader{Algemene Klinische Fysica \& Zintuigfysica}{Kapelzaal} %{{{
 \begin{packed_enum}
 \item[\textbf{14:00}] \textbf{Kleur bekennen!?}\\\textit{Voorzitter: Homme-Auke Kooistra}
@@ -333,7 +331,24 @@
 \item[15:10] Geef kleur aan de QC van beeldschermen!\itemauthor{Wendy Mahn}
 \end{packed_enum} %}}}
 
-\vfill
+%\vfill
+%\strut
+\columnbreak
+
+\hrule \vspace{2mm}
+\parallelitem{\ldots Parallelsessies (2) vrijdagmiddag 8 april}
+\vspace{2mm}\hrule\strut
+%\vfill
+%\vfill
+
+\parallelheader{Klinische Informatica}{Zaal 25} %{{{
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{Big data in de zorg}\\\textit{Voorzitter: Guido Zonneveld}
+\item[14:00] Big Data: alles kan, maar mag ook alles?\itemauthor{Patrick Lubbers}
+\item[14:30] Big Data in de praktijk\itemauthor{Alisa Westerhof}
+\item[15:00] Kunstmatige intelligentie in de zorg: van toekomstbeeld naar realiteit\itemauthor{Maarten de Schipper}
+\end{packed_enum} %}}}
+
 
 % logo
 %\begin{center}
@@ -345,6 +360,30 @@
 \vfill
 %\strut
 %\columnbreak
+
+\hrule\vspace{2mm}
+\parallelitem{Posters}
+\vspace{2mm}\hrule
+
+%\parallelheader{Posters}{}%
+\begin{packed_enum}
+\item[\#1] Quantitative Tc-99m SPECT/CT: A com\-par\-i\-son of Flash 3D, SUV SPECT and UMCS\itemauthor{Koen van Gils}
+\item[\#2] Imaging performance of a digital PET scanner: a com\-par\-i\-son to analog systems\itemauthor{Jorn van Dalen}
+\item[\#3] Accuracy and precision of parametric analysis of dynamic [18F]FLT PET in EGFR-mutated NSCLC patients\itemauthor{Gem Kramer}
+\item[\#4] MLC QC: gap measurements of individual leaf pairs using the EPID\itemauthor{Frank de Weerd}
+\item[\#5] Radiation exposure to interventional radiologists during endovascular procedures\itemauthor{Leonie Paulis}
+\item[\#6] Feasibility of PET reconstruction using MR UTE-based attenuation maps\itemauthor{Han Keijzers}
+\item[\#7] Skeletal muscle oxygenation analysis with inclusion of an adipose tissue layer\itemauthor{Daniel den Boer}
+\item[\#8] Accuracy of UTE-MRI sequences for medical additive manufacturing: a cadaver head study\itemauthor{Maureen van Eijnatten}
+\item[\#9] Radiation safety assessment of 18F-labeled PET tracers for first-in-human studies: first experience with a simplified approach\itemauthor{Maqsood Yaqub}
+\item[\#10] Setup verification of fractionated stereotactic ablative radiotherapy for vertebral metastases: from pilot to realization\itemauthor{Ong Chin Loon}
+\item[\#11] In vivo dosimetry with MOSFETs and GAFCHROMIC films during IORT for partial preast prradiation\itemauthor{Anna Pethoukova}
+\item[\#12] Bekwaam == bevoegd en zo doen we dat bij medische apparatuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
+%\item[\#12] Accuracy and precision of partial volume correction in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
+\end{packed_enum}
+%\vfill
+%\strut
+
 
 \hrule\vspace{2mm}
 \parallelitem{Parallelsessies (3) zaterdagochtend 9 april \ldots}
@@ -382,11 +421,12 @@
 \item[10:12] Robustness recipe for minimax robust optimization in in\-ten\-sity-modulated proton therapy for oropharyngeal can\-cer patients\itemauthor{Sebastian van der Voort}
 \end{packed_enum} %}}}
 
-\columnbreak
-
-\hrule\vspace{2mm}
-\parallelitem{\ldots Parallelsessies (3) zaterdagochtend 9 april}
-\vspace{2mm}\hrule\strut
+\vfill
+%\columnbreak
+%
+%\hrule\vspace{2mm}
+%\parallelitem{\ldots Parallelsessies (3) zaterdagochtend 9 april}
+%\vspace{2mm}\hrule\strut
 
 \parallelheader{Algemene Klinische Fysica}{Atrium (A7/A8)} % {{{
 \begin{packed_enum}
@@ -399,34 +439,10 @@
 %\item[10:15] Bekwaam = bevoegd en zo doen we dat bij medische ap\-pa\-ra\-tuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
 \end{packed_enum} %}}}
 
-\vfill
-%\strut
-
-%\columnbreak
-
-\hrule\vspace{2mm}
-\parallelitem{Posters}
-\vspace{2mm}\hrule
-
-%\parallelheader{Posters}{}%
-\begin{packed_enum}
-\item[\#1] Quantitative Tc-99m SPECT/CT: A com\-par\-i\-son of Flash 3D, SUV SPECT and UMCS\itemauthor{Koen van Gils}
-\item[\#2] Imaging performance of a digital PET scanner: a com\-par\-i\-son to analog systems\itemauthor{Jorn van Dalen}
-\item[\#3] Accuracy and precision of parametric analysis of dynamic [18F]FLT PET in EGFR-mutated NSCLC patients\itemauthor{Gem Kramer}
-\item[\#4] MLC QC: gap measurements of individual leaf pairs using the EPID\itemauthor{Frank de Weerd}
-\item[\#5] Radiation exposure to interventional radiologists during endovascular procedures\itemauthor{Leonie Paulis}
-\item[\#6] Feasibility of PET reconstruction using MR UTE-based attenuation maps\itemauthor{Han Keijzers}
-\item[\#7] Skeletal muscle oxygenation analysis with inclusion of an adipose tissue layer\itemauthor{Daniel den Boer}
-\item[\#8] Accuracy of UTE-MRI sequences for medical additive manufacturing: a cadaver head study\itemauthor{Maureen van Eijnatten}
-\item[\#9] Radiation safety assessment of 18F-labeled PET tracers for first-in-human studies: first experience with a simplified approach\itemauthor{Maqsood Yaqub}
-\item[\#10] Setup verification of fractionated stereotactic ablative radiotherapy for vertebral metastases: from pilot to realization\itemauthor{Ong Chin Loon}
-\item[\#11] In vivo dosimetry with MOSFETs and GAFCHROMIC films during IORT for partial preast prradiation\itemauthor{Anna Pethoukova}
-\item[\#12] Bekwaam == bevoegd en zo doen we dat bij medische apparatuur\itemauthor{Bianca van de Veen en Nanneke Mollink} % item wordt poster
-%\item[\#12] Accuracy and precision of partial volume correction in oncology PET/CT studies\itemauthor{Matthijs Cysouw}
-\end{packed_enum}
 %\vfill
 %\strut
 
+%\columnbreak
 
 
 \end{multicols*}
