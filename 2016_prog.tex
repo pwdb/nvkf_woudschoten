@@ -31,6 +31,7 @@
 \definecolor{Blue}{rgb}{0.3,0.3,0.9}
 \definecolor{DarkBlue}{rgb}{0.0,0.0,1.0}
 \usepackage{polyglossia}
+\usepackage{enumitem}
 %\usepackage{etoolbox}
 %\usepackage{draftwatermark}
 %\SetWatermarkText{Concept}
@@ -99,8 +100,9 @@
 %}%}}}
 
 %{{{ packed_enum
+\SetLabelAlign{Center}{\hfil#1\hfil}
 \newenvironment{packed_enum}{%
-    \begin{enumerate}
+    \begin{enumerate}[align=Center]
     \setlength{\itemsep}{1pt}
     \setlength{\itemindent}{0pt}
     \setlength{\parskip}{0pt}
