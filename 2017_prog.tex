@@ -1,0 +1,357 @@
+\documentclass[a4paper,10pt]{report}
+
+% 2011 - XXVI - 26
+% 2012 - XXVII - 27
+% 2013 - XXVIII - geen conferentie
+% 2014 - 28
+% 2015 - 29
+% 2016 - 30
+% 2017 - 31
+
+% Template for the NVKF program
+
+%{{{ Preamble
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text, Ligatures=TeX}
+\setsansfont[Scale=MatchLowercase]{Myriad Pro}
+\setromanfont[Scale=MatchLowercase]{Myriad Pro}
+\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\ttdefault}{\sfdefault}
+%\renewcommand{\itdefault}{\sfdefault}
+%\renewcommand{\scdefault}{\sfdefault}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage[a4paper, landscape, margin=0.7cm]{geometry}
+\usepackage{graphicx}
+\usepackage{flushend}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\definecolor{Blue}{rgb}{0.3,0.3,0.9}
+\definecolor{DarkBlue}{rgb}{0.0,0.0,1.0}
+\usepackage{polyglossia}
+\usepackage{enumitem}
+%\usepackage{etoolbox}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{Concept}
+%\SetWatermarkScale{1.5}
+%\SetWatermarkColor[gray]{0.5}
+%\setdefaultlanguage{dutch}
+\setdefaultlanguage{english}
+
+
+\parskip=0pt
+
+% space between columns
+% needs to be twice the margin in order to fold in three
+\setlength{\columnsep}{1.4cm}
+% width of separation line between the columns
+\setlength{\columnseprule}{0.2pt}
+%}}} end preamble
+
+\begin{document}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\begin{multicols*}{3}
+%{{{ To make the header for a plenair item
+\newcommand{\plenairheader}[2]{%
+\begin{center}
+    \hrule\vspace{2mm}
+{\color{DarkBlue}{\textbf{#1}} }\\
+{\textbf{#2}}
+\vspace{2mm}\hrule
+\end{center}
+} %}}}
+
+%{{{
+% To make the header for a parallel session 
+\newcommand{\parallelheader}[2]{%
+\parskip=0pt
+\noindent{{\color{DarkBlue}{\textbf{\textit{{#1}}}}}\hfill{\textit{{#2}}}}\vspace{-0.2cm}
+} %}}}
+
+%{{{ parallelitem
+\newcommand{\parallelitem}[1]{%
+\noindent \hfill{\color{DarkBlue}{\textbf{\textsc{{#1}} } }}\hfill\strut
+} %}}}
+
+%%%{{{ enditem
+%\newcommand{\itemauthor}[1]{%
+%\newline\strut\hfill\mbox{\textit{#1}}%
+%}%}}}
+
+%\newcommand\itemauthor[1]{{%
+%\unskip\nobreak\hfil\penalty50
+%\hskip2em\hbox{}\nobreak\hfil{\small \textbf{\textit{#1}}}%
+%\parfillskip=0pt \finalhyphendemerits=0 \par}}
+
+\newcommand\itemauthor[1]{{%
+\unskip\nobreak\hfil\penalty50\hskip1.0em
+\hbox{}\nobreak\dotfill\hskip1.0em{\small {\textit{#1}}}%
+%\nobreak\dotfill\hskip1.0em{\normalsize \textbf{\textit{#1}}}%
+\parfillskip=0pt \finalhyphendemerits=0 \par }}
+
+%%%{{{ enditem
+%\newcommand{\itemauthor}[1]{%
+%\newline\strut\hfill\mbox{\textit{#1}}%
+%\strut\hfill\hphantom{lalala}\hfill\mbox{\textit{#1}}%
+%}%}}}
+
+%{{{ packed_enum
+\SetLabelAlign{Center}{\hfil#1\hfil}
+\SetLabelAlign{Left}{#1\hfil}
+\SetLabelAlign{Right}{\hfil#1}
+\newenvironment{packed_enum}{%
+    \begin{enumerate}[align=Center]
+    \setlength{\itemsep}{1pt}
+    \setlength{\itemindent}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\leftmargin}{0pt}
+}{\end{enumerate}} %}}}
+
+%\makeatletter
+%\patchcmd{\@item}
+  %{\addvspace\itemsep}
+  %{\par\kern\dimexpr.7\itemsep-.7\parskip-.7\baselineskip\relax%
+   %\hrulefill%
+   %\par\kern\dimexpr.3\itemsep-.3\parskip-.3\baselineskip\relax}
+  %{}{}%
+%\makeatother
+
+%\strut\vfill
+\noindent
+\begin{center}
+\includegraphics[width=3cm]{nvkf_logo}\\
+{\bfseries Onderscheidend Vermogen}\\ \vspace{0.15cm} 
+{\bfseries XXXIe NVKF-Conferentie}\\ \vspace{0.15cm}
+{7 en 8 april 2017}\\ \vspace{0.15cm}
+{Woudschoten Conferentiecentrum}\\
+{Woudenbergseweg 54, Zeist}
+\end{center}
+%\vfill\strut
+\vfill
+
+
+%\hrule\vspace{2mm}
+\plenairheader{Plenair Programma}{Vrijdag 7 april 2017} %{{{
+%\vspace{2mm}\hrule
+
+\begin{packed_enum}
+    \item[09:30] Inschrijving en koffie
+        \vfill
+    \item[\textbf{10:00}] \textbf{Opening}\itemauthor{Lieke Poot, voorzitter NVKF}
+        \vfill
+    \item[10:05] Openingsspreker\itemauthor{Openingsspreker}
+        \vfill
+    \item[10:50] Koffiepauze
+        \vfill
+    %\item[{\color{DarkBlue}{\textbf{11:20}}}]{\color{DarkBlue}{\textbf{Parallelsessies (1)}} }
+    %\item[{\color{DarkBlue}{\textbf{11:20}}}]{\color{DarkBlue}{\textbf{Plenaire Sessie}} }
+    \item[\textbf{11:20}] {\textbf{Plenaire sessie}}\\\textit{Voorzitter: Maurice Janssen}
+        \item[11:20] Auditory evoked potentials bij mens en dier\itemauthor{Huib Versnel}
+        \item[11:50] Professorale visie\itemauthor{Walter Backes}
+        \item[12:20] Professorale visie\itemauthor{Chris de Korte}
+        \vfill
+    \item[12:45] \textbf{Lunch} \hfill{\small \textit{Restaurant}}\\
+        {\small Bijeenkomst klinisch fysici in opleiding \hfill\textit{(Plenaire zaal)}}
+        %{\small Bijeenkomst Nederlandse Vereniging voor Klinische Informatica in oprichting \hfill\textit{(Zaal 25)}\strut}
+        \vfill
+    \item[{\color{DarkBlue}{\textbf{14:00}}}]{\color{DarkBlue}{\textbf{Parallelsessies (1)}} }
+        \vfill
+    \item[15:30] Theepauze en postersessie 
+        \vfill
+    \item[\textbf{16:30}] {\textbf{Jonge Onderzoekersprijs (JOP)}}\\\textit{Voorzitter: Maurice Janssen}
+    \item[16:30] Superklifio 1\itemauthor{Superklifio 1}
+    \item[16:50] Superklifio 2\itemauthor{Superklifio 2}
+    \item[17:10] Superklifio 3\itemauthor{Superklifio 3}
+        \vfill
+    \item[17:30] Presentatie nieuwe Klifio/KF/KFprof\\Opleidingsinitiatief van het jaar
+        \vfill
+    \item[\textbf{17:50}] {\textbf{Borreltijd}}
+        \vfill
+    \item[18:30] Diner
+        \vfill
+    \item[\textbf{20:30}] {\textbf{Avondspreker}}\\{\textit{Supergeheime avondspreker}}
+    \end{packed_enum}%}}}
+
+%\hrule\vspace{2mm}
+    %\vfill
+    \columnbreak
+\plenairheader{Plenair Programma}{Zaterdag 8 april 2017} %%{{{
+%\vspace{2mm}\hrule
+
+\begin{packed_enum}
+\item[{\color{DarkBlue}{\textbf{09:00}}}]{\color{DarkBlue}{\textbf{Parallelsessies (2)}} }
+        \vfill
+\item[10:30] Koffiepauze
+        \vfill
+\item[\textbf{11:00}] {\textbf{Plenaire sessie}}\\\textit{Voorzitter: Maurice Janssen}
+\item[11:00] Gamma Knives\itemauthor{Anke van Mourik \& Jannie Schasfoort}
+\item[11:30] Professorale Visie\itemauthor{Andre Dekker}
+\item[12:00] Professorale Visie\itemauthor{Uulke van der Heide}
+        \vfill
+\item[\textbf{12:30}] \textbf{Sluiting}
+\vfill
+\item[12:40] Lunch
+\end{packed_enum}%}}}
+
+
+%\columnbreak
+
+
+%{{{ Logo
+%% Put the logo left top
+%\noindent
+%\begin{tabular}{cc}
+    %\parbox[b]{0.4\linewidth}{%
+%\includegraphics[width=3cm]{nvkf_logo}
+%}
+%& 
+%%\hspace{-0.5cm}\parbox[b]{0.6\linewidth}{%
+%\parbox[b]{0.6\linewidth}{%
+%\begin{center}
+%{\bfseries Leuk, maar hoe zit het nou echt?}\\ \vspace{0.15cm} 
+%{\bfseries XXXe NVKF-Conferentie}\\ \vspace{0.15cm}
+%{8 en 9 april 2016}\\ \vspace{0.15cm}
+%{Woudschoten Conferentiecentrum}\\
+%{Woudenbergseweg 54, Zeist}
+%\end{center}
+%}
+%\end{tabular}
+
+%}}} End of the logo
+
+\vfill
+%\columnbreak
+
+\hrule \vspace{2mm}
+\parallelitem{Parallelsessies (1) vrijdagmiddag 7 april}
+\vspace{2mm}\hrule\strut
+
+\parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{ 
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{RT Sessie (1)}\\\textit{Voorzitters: TBA}
+\item[14:00] Titel \itemauthor{Spreker}
+\item[14:30] Titel \itemauthor{Spreker}
+\item[15:00] Titel \itemauthor{Spreker}
+\end{packed_enum} %}}}
+
+\vfill 
+
+\parallelheader{Beeldvormende Technieken}{Atrium (A7/A8)} %{{{
+\begin{packed_enum}
+\item[\textbf{14:00}]\textbf{BVT Sessie (1)}\\\textit{Voorzitters: TBA}
+\item[14:00] Titel \itemauthor{Spreker}
+\item[14:15] Titel \itemauthor{Spreker}
+\item[14:30] Titel \itemauthor{Spreker}
+\item[14:45] Titel \itemauthor{Spreker}
+\item[15:00] Titel \itemauthor{Spreker}
+\item[15:15] Titel \itemauthor{Spreker}
+\end{packed_enum} %}}}
+ 
+\vfill
+
+\parallelheader{Algemene Klinische Fysica}{Kapelzaal} %{{{
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{AKF Sessie (1)}\\\textit{Voorzitters: TBA}
+\item[14:00] Title \itemauthor{Spreker}
+\item[14:10] Titel \itemauthor{Spreker}
+\item[14:30] Titel \itemauthor{Spreker}
+\item[14:50] Titel \itemauthor{Spreker}
+\item[15:10] Titel \itemauthor{Spreker}
+\end{packed_enum} %}}}
+
+\vfill
+
+\parallelheader{Zintuigfysica}{Zaal 24} %{{{
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{Zintuigfysica Sessie (1)}\\\textit{Voorzitters: TBA}
+\item[14:00] Titel \itemauthor{Spreker}
+\item[14:10] Titel \itemauthor{Spreker}
+\item[14:30] Titel \itemauthor{Spreker}
+\item[14:50] Titel \itemauthor{Spreker}
+\item[15:10] Titel \itemauthor{Spreker}
+\end{packed_enum} %}}}
+
+%\vfill
+%\strut
+%\columnbreak
+
+%\strut
+%\columnbreak
+
+\hrule\vspace{2mm}
+\parallelitem{Parallelsessies (2) zaterdagochtend 8 april}
+\vspace{2mm}\hrule\strut
+
+
+\parallelheader{Zintuigfysica}{Zaal 24} %{{{
+\begin{packed_enum}
+    %\item[\textbf{09:00}] \textbf{Vergadering KKau}\\\textit{Voorzitters: TBA}
+\item[\textbf{09:00}] \textbf{Vergadering KKau}
+%\item[09:00] Lopende zaken
+%\item[09:30] Hoofdbehandelaarschap en face-to-face contacten 
+\end{packed_enum} %}}}
+
+\vfill
+
+\parallelheader{Beeldvormende Technieken}{Kapelzaal} %{{{
+\begin{packed_enum}
+\item[\textbf{09:00}] \textbf{BVT Sessie (2)}\\\textit{Voorzitters: TBA}
+\item[09:00] \itemauthor{Spreker}
+\item[09:15] \itemauthor{Spreker} 
+\item[09:25] \itemauthor{Spreker}
+\item[10:00] \itemauthor{Spreker}
+\end{packed_enum} %}}}
+
+\vfill
+
+\parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{
+\begin{packed_enum}
+\item[\textbf{09:00}]{\textbf{RT Sessie(2)}}
+\item[09:00] \itemauthor{Spreker}
+\item[09:18] \itemauthor{Spreker}
+\item[09:36] \itemauthor{Spreker}
+\item[09:54] \itemauthor{Spreker}
+\item[10:12] \itemauthor{Spreker}
+\end{packed_enum} %}}}
+
+\vfill
+
+\parallelheader{Algemene Klinische Fysica}{Atrium (A7/A8)} % {{{
+\begin{packed_enum}
+\item[\textbf{09:00}] \textbf{AKF Sessie (2)}\\\textit{Voorzitters: TBA}
+\item[09:00] \itemauthor{Spreker}
+\item[09:30] \itemauthor{Spreker}
+\item[09:50] \itemauthor{Spreker}
+\item[10:10] \itemauthor{Spreker}
+\end{packed_enum} %}}}
+
+\vfill
+
+\hrule\vspace{2mm}
+\parallelitem{Posters}
+\vspace{2mm}\hrule\strut
+\begin{packed_enum}
+\item[\#1] \itemauthor{Piet Poster}
+\item[\#\ldots] \itemauthor{Piet Poster}
+\end{packed_enum}
+%\vfill
+%\strut
+
+
+%\vfill
+%\strut
+
+%\columnbreak
+
+
+\end{multicols*}
+
+\end{document}
+
+% vim:et foldmethod=marker ts=4 sw=4 tw=0
