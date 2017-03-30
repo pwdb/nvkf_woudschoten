@@ -34,10 +34,10 @@
 \usepackage{polyglossia}
 \usepackage{enumitem}
 %\usepackage{etoolbox}
-%\usepackage{draftwatermark}
-%\SetWatermarkText{Concept}
-%\SetWatermarkScale{1.5}
-%\SetWatermarkColor[gray]{0.5}
+\usepackage{draftwatermark}
+\SetWatermarkText{Concept}
+\SetWatermarkScale{1.5}
+\SetWatermarkColor[gray]{0.9}
 %\setdefaultlanguage{dutch}
 \setdefaultlanguage{english}
 
@@ -88,9 +88,13 @@
 %\hskip2em\hbox{}\nobreak\hfil{\small \textbf{\textit{#1}}}%
 %\parfillskip=0pt \finalhyphendemerits=0 \par}}
 
+\makeatletter
+\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ .33em{\hss .\hss }\hfill \kern \z@}
+\makeatother
+
 \newcommand\itemauthor[1]{{%
-\unskip\nobreak\hfil\penalty50\hskip1.0em
-\hbox{}\nobreak\dotfill\hskip1.0em{\small {\textit{#1}}}%
+\unskip\nobreak\hfil\penalty50\hskip0.33em
+\hbox{}\nobreak\Dotfill\hskip0.33em{\small {\textit{#1}}}%
 %\nobreak\dotfill\hskip1.0em{\normalsize \textbf{\textit{#1}}}%
 \parfillskip=0pt \finalhyphendemerits=0 \par }}
 
@@ -127,7 +131,7 @@
 \begin{center}
 \includegraphics[width=3cm]{nvkf_logo}\\
 {\bfseries Onderscheidend Vermogen}\\ \vspace{0.10cm} 
-{\bfseries XXXIe NVKF-Conferentie}\\ \vspace{0.10cm}
+{\bfseries XXXI-e NVKF-Conferentie}\\ \vspace{0.10cm}
 {7 en 8 april 2017}\\ \vspace{0.15cm}
 {Woudschoten Conferentiecentrum}\\
 {Woudenbergseweg 54, Zeist}
@@ -142,13 +146,13 @@
         \vfill
     \item[\textbf{10:00}] \textbf{Opening}\itemauthor{Lieke Poot, voorzitter NVKF}
         \vfill
-    \item[10:05] Gezondheidszorg en Technologie: een onderwijskundig perspectief \itemauthor{Heleen Miedema, Technische Geneeskunde, Universiteit Twente}
+    \item[10:05] Gezondheidszorg en Technologie: een onderwijskundig perspectief\itemauthor{Heleen Miedema}\hfill {\small \textit{Technische Geneeskunde, Universiteit Twente}}
         \vfill
     \item[10:50] Koffiepauze
         \vfill
     %\item[{\color{DarkBlue}{\textbf{11:20}}}]{\color{DarkBlue}{\textbf{Parallelsessies (1)}} }
     %\item[{\color{DarkBlue}{\textbf{11:20}}}]{\color{DarkBlue}{\textbf{Plenaire Sessie}} }
-    \item[\textbf{11:20}] {\textbf{Plenaire sessie}}\\\textit{Voorzitter: TBA}
+    \item[\textbf{11:20}] {\textbf{Plenaire sessie}}\\\textit{Voorzitter: Maurice Janssen}
         \item[11:20] Auditory evoked potentials bij mens en dier\itemauthor{Huib Versnel}
         \item[11:50] Zicht op het onderscheid van kleine vaten\itemauthor{Walter Backes}
         \item[12:20] Is ultrageluid onderscheidend?\itemauthor{Chris de Korte}
@@ -170,10 +174,16 @@
 \plenairheader{Plenair Programma}{Vrijdag 7 april 2017 - vervolg} %{{{
     \vfill
     %\item[{\color{DarkBlue}{\textbf{11:20}}}]{\color{DarkBlue}{\textbf{Parallelsessies (1)}} }
-    \item[17:30] Presentatie nieuwe klifio's en klinisch fysici\\Opleidingsinitiatief van het jaar\\
-    \item[\#1] Opleiden in de regio: werkterrein èn instituut overstijgend! \itemauthor{KlaasJan Renema}
-    \item[\#2] Clustersamenwerking: implementatie van een kwa\-li\-teits\-cyclus \itemauthor{Anne Lisa Wolf}
-    \item[\#3] Opleidingsinitiatief ZGT: de 3 + 1 jarige opleiding \itemauthor{Willem Wormgoor}
+\item[17:30] Presentatie nieuwe klifio's en klinisch fysici\vspace{2mm}\\Opleidingsinitiatief van het jaar:\vspace{2mm}\\
+    %\item[\#1] Opleiden in de regio: werkterrein èn instituut overstijgend! \itemauthor{Jaap Beintema, Arno Janssen, Germaine Jongen, Teun Minkels en Melissa van de Steeg}
+    %\item[\#2] Clustersamenwerking: implementatie van een kwa\-li\-teits\-cyclus \itemauthor{Anne Lisa Wolf}
+    %\item[\#3] Opleidingsinitiatief ZGT: de 3 + 1 jarige opleiding \itemauthor{Willem Wormgoor}
+    \noindent
+    Opleiden in de regio: werkterrein èn instituut overstijgend! \itemauthor{Jaap Beintema, Arno Janssen, Germaine Jongen, Teun Minkels en Melissa van de Steeg}
+    \vspace{1mm}
+    Clustersamenwerking: implementatie van een kwa\-li\-teits\-cyclus \itemauthor{Anne Lisa Wolf}
+    \vspace{1mm}
+    Opleidingsinitiatief ZGT: de 3 + 1 jarige opleiding \itemauthor{Willem Wormgoor}
         \vfill
     \item[\textbf{18:00}] {\textbf{Borreltijd}}
         \vfill
@@ -193,7 +203,7 @@
         \vfill
 \item[10:30] Koffiepauze
         \vfill
-\item[\textbf{11:00}] {\textbf{Plenaire sessie}}\\\textit{Voorzitter: TBA}
+\item[\textbf{11:00}] {\textbf{Plenaire sessie}}\\\textit{Voorzitter: Maurice Janssen}
 \item[11:00] Gamma Knives\itemauthor{Anke van Mourik \& Jannie Schasfoort}
 \item[11:30] Het onderscheiden vermogen van data\itemauthor{Andre Dekker}
 \item[12:00] Wat we zien, en wat we er mee doen\itemauthor{Uulke van der Heide}
@@ -229,7 +239,12 @@
 %}}} End of the logo
 
 \vfill
-\vspace{5cm}\strut
+\vspace{4cm}
+%\hrule \vspace{2mm}
+%Zon onder 7 april: 20:25\\
+%Zon op 8 april: 06:59
+
+\strut
 \columnbreak
 
 \hrule \vspace{2mm}
@@ -248,27 +263,16 @@
 
 \parallelheader{Beeldvormende Technieken}{Atrium (A7/A8)} %{{{ vrijdagmiddag
 \begin{packed_enum}
-\item[\textbf{14:00}]\textbf{BVT Sessie (1)}\\\textit{Voorzitters: TBA}
+\item[\textbf{14:00}]\textbf{BVT Sessie (1)}\\\textit{Voorzitters: KlaasJan Renema \& Ronald Boellaard}
 \item[14:00] Volumetric Assessment of Wall Shear Stress in vivo based on 4D Flow MRI \itemauthor{Aart Nederveen}
 \item[14:15] Maximum Rubidium-82 activity for accurate myocardial blood flow quantification using digital PET \itemauthor{Jorn van Dalen}
 \item[14:30] Metal artifact reduction of CT scans to improve PET/CT \itemauthor{Eric Visser}
-\item[14:45] Vergadering van de kring Beeldvormende Technieken
+\item[\textbf{14:45}] \textbf{Vergadering van de kring Beeldvormende Technieken} \\ \textit{Koersbepaling kring-BVT}
 %\item[14:45] Influence of different types of acquisition techniques on procedural and staff dose in image guided interventions\itemauthor{Leonie Paulis}
 %\item[15:00] Optimizing staff dose in image guided interventions by comparing phantom experiments with real-life staff doses\itemauthor{Leonie Paulis}
 %\item[15:15] Personalized Feedback on Staff and Patient Dose in Image Guided Interventions – a New Era in Radiation Dose Monitoring\itemauthor{Leonie Paulis}
 \end{packed_enum} %}}}
  
-\vfill
-
-\parallelheader{Algemene Klinische Fysica}{Kapelzaal} %{{{ vrijdagmiddag
-\begin{packed_enum}
-\item[\textbf{14:00}] \textbf{AKF Sessie CONCEPT }\\\textit{Voorzitters: TBA}
-\item[14:00] Aanschafproces in Radboud UMC\itemauthor{Erik Gelderblom}
-\item[14:22] Stroomschema medische hulpmiddelen in het MMC\itemauthor{Carola van Pul en/of Eduard Meijer}
-\item[14:44] ECRI Top 10\itemauthor{Mark den Blanken}
-\item[15:08] Bekwaam in het OLVG\itemauthor{Job Gutteling}
-\end{packed_enum} %}}}
-
 \vfill
 
 \parallelheader{Zintuigfysica}{Zaal 24} %{{{ vrijdagmiddag
@@ -282,6 +286,23 @@
 Onderscheidend vermogen van de audioloog en van het AC\itemauthor{Wouter Dreschler}
 \end{packed_enum} %}}}
 
+\vfill\strut
+
+\columnbreak
+
+\hrule \vspace{2mm}
+\parallelitem{Parallelsessies (1) vrijdagmiddag 7 april - vervolg} %{{{ parallel vrijdagmiddag
+\vspace{2mm}\hrule\strut
+
+\parallelheader{Algemene Klinische Fysica}{Kapelzaal} %{{{ vrijdagmiddag
+\begin{packed_enum}
+\item[\textbf{14:00}] \textbf{AKF Sessie (1)}\\\textit{Voorzitter: Sander van der Meer}
+\item[14:00] Convenant 2.0 in een Universitair Medisch Netwerk\itemauthor{Erik Gelderblom}
+\item[14:22] Stroomschema medische hulpmiddelen in het MMC -- CE en niet-CE\itemauthor{Carola van der Pul en Eduard Meijer}
+\item[14:44] Medische technologie: knap gevaarlijk\itemauthor{Mark den Blanken}
+\item[15:08] Uitdagingen voor aantoonbare bekwaamheid medische technologie\itemauthor{Job Gutteling}
+\end{packed_enum} %}}}
+
 \vfill
 
 \parallelheader{Klinische Informatica}{Zaal 25} %{{{ vrijdagmiddag
@@ -292,11 +313,11 @@ Onderscheidend vermogen van de audioloog en van het AC\itemauthor{Wouter Dreschl
 \item[15:00] Discussie: Uitwisseling data met de patient \itemauthor{Guido Zonneveld \& Roanda Fokkens}
 \end{packed_enum} %}}}
 
-%\vfill
+\vfill
 
-\parallelheader{Biomedisch Technologen in de Zorg}{Zaal xx} %{{{ vrijdagmiddag
+\parallelheader{Biomedisch Technologen in de Zorg}{Zaal 22/23} %{{{ vrijdagmiddag
 \begin{packed_enum}
-\item[\textbf{14:00}] \textbf{BMTZ Sessie (1)}\\\textit{Voorzitters: TBA}
+\item[\textbf{14:00}] \textbf{Veilig gebruik, van een veilig apparaat in een veilige omgeving}\\\textit{Voorzitters: TBA}
 \item[14:00] Titel \itemauthor{Spreker}
 \item[14:50] Titel \itemauthor{Spreker}
 \item[15:10] Titel \itemauthor{Spreker}
@@ -304,8 +325,7 @@ Onderscheidend vermogen van de audioloog en van het AC\itemauthor{Wouter Dreschl
 
 %}}} parallel vrijdagmiddag
 
-\vfill
-\vspace{7cm}\strut
+\vfill\vspace{5cm}\strut
 
 %\vfill
 %\strut
@@ -327,32 +347,22 @@ Onderscheidend vermogen van de audioloog en van het AC\itemauthor{Wouter Dreschl
 
 \vfill
 
-\parallelheader{Beeldvormende Technieken}{Kapelzaal} %{{{ zaterdagochtend
+\parallelheader{Beeldvormende Technieken}{Atrium (A7/A8)} %{{{ zaterdagochtend
 \begin{packed_enum}
-\item[\textbf{09:00}] \textbf{BVT Sessie (2)}
+\item[\textbf{09:00}] \textbf{BVT Sessie (2)}\\\textit{Voorzitters: Jan Habraken \& C\'ecile Jeukens}
 \item[09:00] Loodcomposiet vs.\ loodvrije schorten: welke zijn beter? \itemauthor{Steffie Peters}
-\item[09:18] Pressure standardized compression: a safe replacement for force standardized compression in mammography?\itemauthor{Lida Dam-Vervloet} 
-\item[09:36] Mammografie: Overdrachtseigenschappen bij 2D en Tomosynthese beelden \itemauthor{Leo Romijn}
-\item[09:54] Fysica: Overdrachtseigenschappen van projectie-rönt\-gen\-systemen\itemauthor{Frits van der Meer}
-\item[10:12] Bridging the gap: easy to implement QC for diagnostic image quality \itemauthor{Bastiaan van Nierop}
+\item[09:15] Pressure standardized compression: a safe replacement for force standardized compression in mammography?\itemauthor{Lida Dam-Vervloet} 
+\item[09:30] Mammografie: Overdrachtseigenschappen bij 2D en Tomosynthese beelden \itemauthor{Leo Romijn}
+\item[09:45] Fysica: Overdrachtseigenschappen van projectie-rönt\-gen\-systemen\itemauthor{Frits van der Meer}
+\item[10:00] Samenvatting Dosismonitoring bijeenkomst 9 maart\itemauthor{Peter Brinks}
+\item[10:15] Bridging the gap: easy to implement QC for diagnostic image quality \itemauthor{Bastiaan van Nierop}
 \end{packed_enum} %}}}
 
 \vfill
 
-\parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{ zaterdagochtend
+\parallelheader{Algemene Klinische Fysica}{Kapelzaal} % {{{ zaterdagochtend
 \begin{packed_enum}
-\item[\textbf{09:00}]{\textbf{RT Sessie(2)}}
-\item[09:00] Late toxicity in the HYPRO randomized trial analyzed by automated planning and intrinsic NTCP-modelling\itemauthor{Abdul Wahab M. Sharfo}
-\item[09:22] Automated treatment planning for prospective QA in the TRENDY randomized trial on liver-SBRT for HCC\itemauthor{Steven Habraken}
-\item[09:44] Locoregionale radiotherapie van het mammacarcinoom in NL: survey van gebruikte technieken en ontwikkelingen\itemauthor{Duncan den Boer}
-\item[10:06] Automatische kwaliteitscontrole geometrische nauw\-keur\-igheid MRI voor toepassing in de radiotherapie\itemauthor{Danique Barten}
-\end{packed_enum} %}}}
-
-\vfill
-
-\parallelheader{Algemene Klinische Fysica}{Atrium (A7/A8)} % {{{ zaterdagochtend
-\begin{packed_enum}
-\item[\textbf{09:00}] \textbf{AKF Abstract Sessie}\\\textit{Voorzitters: TBA}
+\item[\textbf{09:00}] \textbf{AKF Sessie (2)}\\\textit{Voorzitter: Eduard Meijer}
 \item[09:00] A Dashboard For Managing Medical Technology\itemauthor{Nikita Kruis}
 \item[09:15] Duurzaam bekwaam gebruik van medische technologie\itemauthor{Marcia Emmer}
 \item[09:30] Feasibility and reproducibility of local pulse wave velocity measurements using ultrafast ultrasonic imaging\itemauthor{Wouter Gevers}
@@ -361,7 +371,24 @@ Onderscheidend vermogen van de audioloog en van het AC\itemauthor{Wouter Dreschl
 \item[10:15] Dosisoptimalisatie bij ingebruikname van een nieuwe CT-scanner \itemauthor{Robert Elfrink}
 \end{packed_enum} %}}}
 
+\vfill
+
+\columnbreak
+
+\hrule\vspace{2mm}
+\parallelitem{Parallelsessies (2) zaterdagochtend 8 april - vervolg} %{{{ Parallel zaterdagochtend
+\vspace{2mm}\hrule\strut
 %}}} parallel zaterdagochtend
+\vfill
+\parallelheader{Klinische Radiotherapie}{Plenaire zaal} %{{{ zaterdagochtend
+\begin{packed_enum}
+\item[\textbf{09:00}]{\textbf{RT Sessie (2)}}
+\item[09:00] Late toxicity in the HYPRO randomized trial analyzed by automated planning and intrinsic NTCP-modelling\itemauthor{Abdul Wahab M. Sharfo}
+\item[09:22] Automated treatment planning for prospective QA in the TRENDY randomized trial on liver-SBRT for HCC\itemauthor{Steven Habraken}
+\item[09:44] Locoregionale radiotherapie van het mammacarcinoom in NL: survey van gebruikte technieken en ontwikkelingen\itemauthor{Duncan den Boer}
+\item[10:06] Automatische kwaliteitscontrole geometrische nauw\-keur\-igheid MRI voor toepassing in de radiotherapie\itemauthor{Danique Barten}
+\end{packed_enum} %}}}
+
 
 \vfill
 
@@ -375,22 +402,22 @@ Onderscheidend vermogen van de audioloog en van het AC\itemauthor{Wouter Dreschl
 % Twee posters vervallen
 %\item[\#1] Eigen ontwikkelde software tool voor ziekenhuisbrede dosismonitoring \itemauthor{Loes Sauren} 
 %\item[\#8] Ervaringen met een dosisregistratiesysteem\itemauthor{Janneke Ansems}
+%\item[\#4] Influence of different types of acquisition techniques on procedural and staff dose in image guided interventions\itemauthor{Leonie Paulis}
+%\item[\#6] Optimizing staff dose in image guided interventions by comparing phantom experiments with real-life staff doses\itemauthor{Leonie Paulis}
+%\item[\#7] Personalized Feedback on Staff and Patient Dose in Image Guided Interventions – a New Era in Radiation Dose Monitoring\itemauthor{Leonie Paulis}
 \item[\#1] Introduction of Near-Infrared Auto-Fluorescence Imaging to Improve Surgical Precision in the Thyroid Area\itemauthor{Marieke Lijnkamp-Pluijmert}
 \item[\#2] Comparison of image quality and radiation dose between conventional 2D full field digital mammography and synthetic 2D mammography\itemauthor{Lida Dam-Vervloet}
 \item[\#3] Angiografie met Clarity: halvering dosis, behoud beeldkwaliteit\itemauthor{Han Keijzers}
-\item[\#4] Influence of different types of acquisition techniques on procedural and staff dose in image guided interventions\itemauthor{Leonie Paulis}
-\item[\#5] Improved class solutions for prostate brachytherapy planning via evolutionary machine learning\itemauthor{Stef Maree}
-\item[\#6] Optimizing staff dose in image guided interventions by comparing phantom experiments with real-life staff doses\itemauthor{Leonie Paulis}
-\item[\#7] Personalized Feedback on Staff and Patient Dose in Image Guided Interventions – a New Era in Radiation Dose Monitoring\itemauthor{Leonie Paulis}
-\item[\#8] Impact of model and dose uncertainty on NTCP-model-based patient selection for proton therapy\itemauthor{Sebastiaan Breedveld}
-\item[\#9] Prospective validation of the usefulness of treatment planning QA for  automatic treatment planning\itemauthor{Yibing Wang}
-\item[\#10] Robustness of IMRT and VMAT for interfraction motion in locoregional breast irradiation\itemauthor{Richard Canters}
-\item[\#11] Does intrafraction motion between breath holds during breast cancer treatment impact on delivered dose?\itemauthor{Martijn Kusters}
-\item[\#12] Reproducibility and stability of vmDIBHs during breast cancer treatment measured using a 3D camera\itemauthor{Martijn Kusters}
-\item[\#13] NCS rapport 24 metingen op vier nieuwe Elekta VersaHD toestellen\itemauthor{Julienne Nijst-Brouwers}
+\item[\#4] Improved class solutions for prostate brachytherapy planning via evolutionary machine learning\itemauthor{Stef Maree}
+\item[\#5] Impact of model and dose uncertainty on NTCP-model-based patient selection for proton therapy\itemauthor{Rik Bijman}
+\item[\#6] Prospective validation of the usefulness of treatment planning QA for  automatic treatment planning\itemauthor{Yibing Wang}
+\item[\#7] Robustness of IMRT and VMAT for interfraction motion in locoregional breast irradiation\itemauthor{Richard Canters}
+\item[\#8] Does intrafraction motion between breath holds during breast cancer treatment impact on delivered dose?\itemauthor{Martijn Kusters}
+\item[\#9] Reproducibility and stability of vmDIBHs during breast cancer treatment measured using a 3D camera\itemauthor{Martijn Kusters}
+\item[\#10] NCS rapport 24 metingen op vier nieuwe Elekta VersaHD toestellen\itemauthor{Julienne Nijst-Brouwers}
 \end{packed_enum} %}}}
-\vfill
-\strut
+%\vfill
+%\strut
 
 %\vfill
 %\strut
